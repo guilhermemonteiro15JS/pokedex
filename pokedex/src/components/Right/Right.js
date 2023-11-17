@@ -1,11 +1,12 @@
 import React from "react";
 import PokeStats from "./PokeStats/PokeStats";
+import { RightStyle } from "./styled";
 
 const Right = ({ pokemon }) => {
   return (
-    <div>
+    <RightStyle>
       <PokeStats pokemon={pokemon} />
-    </div>
+    </RightStyle>
   );
 };
 
