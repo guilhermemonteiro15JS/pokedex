@@ -1,15 +1,15 @@
 import React from 'react';
-import { Status } from './styled';
+import { Status, PokeStatsH2, PokeStatsUl } from './styled';
 
 const PokeStats = ({ pokemon }) => {
   return (
     <Status>
-      <h2>Stats:</h2>
-      <ul>
+      <PokeStatsH2>Stats:</PokeStatsH2>
+      <PokeStatsUl>
         {pokemon.data.stats.map((stat, index) => (
           <li key={index}> {stat.stat.name} : {stat.base_stat} </li>
         ))}
-      </ul>
+      </PokeStatsUl>
     </Status>
   );
 }

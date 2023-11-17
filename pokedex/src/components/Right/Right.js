@@ -6,7 +6,8 @@ import PokeDetails from "./PokeDetails/PokeDetails";
 const Right = ({ pokemon , pokeSpecie}) => {
   return (
     <RightStyle >
-        <PokeDetails pokemon={pokemon} pokeSpecie={pokeSpecie}/>
+      {<PokeDetails pokemon={pokemon} pokeSpecie={pokeSpecie}/>}
+      <PokeStats pokemon={pokemon} />
       <PokeStats pokemon={pokemon} />
     </RightStyle>
   );

@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { PokeTypeH2, PokeTypeUl } from './styled';
 
 const PokeType = ({pokemon}) => {
   return (
     <div>
-           <h2>Types:</h2>
-      <ul>
+           <PokeTypeH2>Types:</PokeTypeH2>
+      <PokeTypeUl>
         {pokemon.data.types.map((type, index) => (
           <li key={index}> {type.type.name} </li>
         ))}
-      </ul>
+      </PokeTypeUl>
     </div>
   )
 }

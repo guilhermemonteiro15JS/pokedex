@@ -6,5 +6,7 @@ height: 752px;
 border-radius: 15px;
 background: #D2162E;
 display: flex;
-justify-content: center;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
 `;
