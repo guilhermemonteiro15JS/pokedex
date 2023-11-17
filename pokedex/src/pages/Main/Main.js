@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
-import { getGen1, kanto, getPokem } from "../../api";
-import PokeImage from "../../components/Central/PokeImage/PokeImage";
+import { getGen1, kanto, getPokem, getPokeSpecies } from "../../api";
+
 import axios from "axios";
 import Central from "../../components/Central/Central";
 import Right from "../../components/Right/Right";
@@ -10,6 +10,7 @@ const Main = () => {
   const [pokedex, setPokedex] = useState([]);
   const [pokemon, setPokemon] = useState(null);
   const [pokeNumber, setPokeNumber] = useState(0);
+  const [pokeSpecie, setPokeSpecie] = useState(null);
 
   const fetchPokedex = async () => {
     try {
@@ -28,9 +29,18 @@ const Main = () => {
     } catch (err) {}
   };
 
+  const fetchPokemonSpecies = async (pokemonName) => {
+    try {
+        const pokem = await axios.get(`${getPokeSpecies}${pokemonName}`);
+        console.log(pokem.data);
+        setPokeSpecie(pokem);
+      } catch (err) {}
+  }
+
   const fetchDataForCurrentPokemon = () => {
     if (pokedex.length > 0) {
       fetchPokemon(pokedex[pokeNumber].pokemon_species.name);
+      fetchPokemonSpecies(pokedex[pokeNumber].pokemon_species.name)
     }
   };
 
@@ -61,7 +71,7 @@ const Main = () => {
       </div>
       <Border/>
       
-      {pokemon ? <Right pokemon={pokemon} /> : "vazio"}
+      {pokemon ? <Right pokemon={pokemon} pokeSpecie={pokeSpecie}/> : "vazio"}
 
     </Pokedex>
   );

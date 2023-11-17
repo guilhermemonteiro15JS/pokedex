@@ -1,10 +1,12 @@
 import React from "react";
 import PokeStats from "./PokeStats/PokeStats";
 import { RightStyle } from "./styled";
+import PokeDetails from "./PokeDetails/PokeDetails";
 
-const Right = ({ pokemon }) => {
+const Right = ({ pokemon , pokeSpecie}) => {
   return (
-    <RightStyle>
+    <RightStyle >
+        <PokeDetails pokemon={pokemon} pokeSpecie={pokeSpecie}/>
       <PokeStats pokemon={pokemon} />
     </RightStyle>
   );
