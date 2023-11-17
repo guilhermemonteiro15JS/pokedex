@@ -1,13 +1,13 @@
 import React from "react";
+import { ImgPoke, ImgPokeDiv } from "./styled";
 
 const PokeImage = ({ pokemon }) => {
 
     
   return (
-    <div>
-     
-      <img src={pokemon.data.sprites.other.home.front_default}/>
-    </div>
+    <ImgPokeDiv>
+      <ImgPoke src={pokemon.data.sprites.other.home.front_default}/>
+    </ImgPokeDiv>
   );
 };
 

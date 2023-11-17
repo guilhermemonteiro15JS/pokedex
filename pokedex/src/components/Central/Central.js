@@ -1,14 +1,20 @@
-import React from 'react'
-import PokeImage from './PokeImage/PokeImage'
-import PokeName from './PokeName/PokeName'
+import React from "react";
+import PokeImage from "./PokeImage/PokeImage";
+import PokeName from "./PokeName/PokeName";
+import { CentralStyle, BrowserButton, BrowserButtonsContainer } from "./styled";
 
-const Central = ({pokemon}) => {
+const Central = ({ pokemon }) => {
   return (
-    <div>
-        <PokeImage pokemon={pokemon}/>
-        <PokeName pokemon={pokemon}/>
-    </div>
-  )
-}
+    <CentralStyle>
+      <BrowserButtonsContainer>
+        <BrowserButton />
+        <BrowserButton />
+        <BrowserButton />
+      </BrowserButtonsContainer>
+      <PokeImage pokemon={pokemon} />
+      <PokeName pokemon={pokemon} />
+    </CentralStyle>
+  );
+};
 
-export default Central
+export default Central;

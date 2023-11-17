@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { PokeNameH2 } from './styled';
 
 const PokeName = ({pokemon}) => {
   return (
-    <h2>{pokemon.data.name}</h2>
+    <PokeNameH2>{pokemon.data.name}</PokeNameH2>
   )
 }
 
