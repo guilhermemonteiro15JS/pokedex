@@ -1,7 +1,8 @@
 import React from "react";
 
 const PokeImage = ({ pokemon }) => {
-    console.log(pokemon.data.name)
+
+    
   return (
     <div>
      

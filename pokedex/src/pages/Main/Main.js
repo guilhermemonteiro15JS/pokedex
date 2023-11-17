@@ -2,11 +2,12 @@ import {React, useEffect, useState} from 'react'
 import {getGen1, kanto, getPokem} from '../../api'
 import PokeImage from '../../components/Central/PokeImage/PokeImage'
 import axios from 'axios';
+import Central from '../../components/Central/Central';
 
 const Main = () => {
 const [pokedex, setPokedex] = useState([]);
 const [pokemon, setPokemon] = useState(null);
-let pokeNumber= 0;
+const [pokeNumber, setPokeNumber] = useState(0);
 
 const fetchPokedex= async () =>{
     try{
@@ -32,6 +33,14 @@ const fetchPokemon= async (pokemonName) =>{
 
 } 
 
+
+const fetchDataForCurrentPokemon = () => {
+    if (pokedex.length > 0) {
+      fetchPokemon(pokedex[pokeNumber].pokemon_species.name);
+    }
+  };
+
+
  useEffect(()=>{
     fetchPokedex();
 }, [])
@@ -39,21 +48,24 @@ const fetchPokemon= async (pokemonName) =>{
 
 
 
+useEffect(() => {
+    fetchDataForCurrentPokemon();
+  }, [pokedex, pokeNumber]);
 
-useEffect(()=>{
-    if (pokedex.length > 0) {
-        fetchPokemon(pokedex[pokeNumber].pokemon_species.name);
+  const handlePrev = (e)=>{
+    setPokeNumber((prevNumber) => prevNumber -1)
+    
     }
-}, [pokedex])
 
+const handleNext = (e)=>{
+setPokeNumber((prevNumber) => prevNumber +1)
 
-const handleNext = ()=>{
-   return pokeNumber +1
 }
  
   return (
     <div>
-         {pokemon ?<PokeImage pokemon={pokemon}/> : "vazio"} 
+         {pokemon ?<Central pokemon={pokemon}/> : "vazio"} 
+         <button onClick={handlePrev}>Prev</button>
          <button onClick={handleNext}>Next</button>
           
     </div>
