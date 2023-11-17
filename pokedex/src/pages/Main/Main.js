@@ -11,6 +11,8 @@ const Main = () => {
   const [pokemon, setPokemon] = useState(null);
   const [pokeNumber, setPokeNumber] = useState(0);
   const [pokeSpecie, setPokeSpecie] = useState(null);
+  const [evolutionChainUrl, setEvolutionChainUrl] = useState(null);
+  const [evolutionUrls, setEvolutionUrls] = useState([]);
 
   const fetchPokedex = async () => {
     try {
@@ -23,26 +25,38 @@ const Main = () => {
 
   const fetchPokemon = async (pokemonName) => {
     try {
-      const pokem = await axios.get(`${getPokem}${pokemonName}`);
-      console.log(pokem.data);
-      setPokemon(pokem);
+      const pokeData = await axios.get(`${getPokem}${pokemonName}`);
+      console.log(pokeData.data);
+      setPokemon(pokeData);
     } catch (err) {}
   };
 
   const fetchPokemonSpecies = async (pokemonName) => {
     try {
-        const pokem = await axios.get(`${getPokeSpecies}${pokemonName}`);
-        console.log(pokem.data);
-        setPokeSpecie(pokem);
-      } catch (err) {}
-  }
+      const pokem = await axios.get(`${getPokeSpecies}${pokemonName}`);
+      console.log(pokem.data);
+      setPokeSpecie(pokem);
+      const evolutionChainUrl = pokem.data.evolution_chain.url;
+      console.log(evolutionChainUrl);
+      setEvolutionChainUrl(evolutionChainUrl);
+    } catch (err) {}
+  };
 
   const fetchDataForCurrentPokemon = () => {
     if (pokedex.length > 0) {
       fetchPokemon(pokedex[pokeNumber].pokemon_species.name);
-      fetchPokemonSpecies(pokedex[pokeNumber].pokemon_species.name)
+      fetchPokemonSpecies(pokedex[pokeNumber].pokemon_species.name);
     }
   };
+  const getEvoChain = async (url) => {
+    if (!evolutionChainUrl) return;
+
+    try {
+      const response = await axios.get(url);
+      console.log("Evolução:", response);
+    } catch (err) {}
+  };
+
 
   useEffect(() => {
     fetchPokedex();
@@ -51,6 +65,13 @@ const Main = () => {
   useEffect(() => {
     fetchDataForCurrentPokemon();
   }, [pokedex, pokeNumber]);
+
+  useEffect(() => {
+    if (evolutionChainUrl) {
+      getEvoChain(evolutionChainUrl);
+    }
+  }, [evolutionChainUrl]);
+
 
   const handlePrev = (e) => {
     setPokeNumber((prevNumber) => prevNumber - 1);
@@ -64,15 +85,14 @@ const Main = () => {
     <Pokedex>
       <div>
         {pokemon ? (
-        <Central pokemon={pokemon} onPrev={handlePrev} onNext={handleNext} />
-      ) : (
-        "vazio"
-      )}
+          <Central pokemon={pokemon} onPrev={handlePrev} onNext={handleNext} />
+        ) : (
+          "vazio"
+        )}
       </div>
-      <Border/>
-      
-      {pokemon ? <Right pokemon={pokemon} pokeSpecie={pokeSpecie}/> : "vazio"}
+      <Border />
 
+      {pokemon ? <Right pokemon={pokemon} pokeSpecie={pokeSpecie} /> : "vazio"}
     </Pokedex>
   );
 };
