@@ -38,31 +38,24 @@ cursor: pointer;
 }
 `;
 
-
 export const BtnOnNext = styled.button`
-width: 110px;
-height: 20px;
-position: absolute;
-left: 342px;
-top: 640px;
-bottom: 117px;
-background: url("/Buttontogoright.png");
-border: none;
-border-radius: 70%;
-cursor: pointer;
+  width: 110px;
+  height: 20px;
+  background: url("/Buttontogoright.png");
+  border: none;
+  border-radius: 70%;
+  cursor: pointer;
 `;
 
 export const BtnOnPrev = styled.button`
-width: 110px;
-height: 20px;
-position: absolute;
-left: 47px;
-top: 640px;
-bottom: 117px;
-background: url("/Buttontogoleft.png");
-border: none;
-border-radius: 70%;
-cursor: pointer;
+  width: 110px;
+  height: 20px;
+  background: url("/Buttontogoleft.png");
+  border: none;
+  border-radius: 70%;
+  cursor: pointer;
 `;
-
-
+export const BtnGeral = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  `;

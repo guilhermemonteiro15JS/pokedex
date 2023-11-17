@@ -1,11 +1,16 @@
-import {React} from "react";
+import { React } from "react";
 import PokeImage from "./PokeImage/PokeImage";
 import PokeName from "./PokeName/PokeName";
-import { CentralStyle, BrowserButton, BrowserButtonsContainer, BtnOnNext, BtnOnPrev } from "./styled";
+import {
+  CentralStyle,
+  BrowserButton,
+  BrowserButtonsContainer,
+  BtnOnNext,
+  BtnOnPrev,
+  BtnGeral
+} from "./styled";
 
-const Central = ({ pokemon, onPrev, onNext}) => {
-
-
+const Central = ({ pokemon, onPrev, onNext }) => {
   return (
     <CentralStyle>
       <BrowserButtonsContainer>
@@ -15,9 +20,10 @@ const Central = ({ pokemon, onPrev, onNext}) => {
       </BrowserButtonsContainer>
       <PokeImage pokemon={pokemon} />
       <PokeName pokemon={pokemon} />
-
-      <BtnOnPrev onClick={onPrev}></BtnOnPrev>
-      <BtnOnNext onClick={onNext}></BtnOnNext>
+      <BtnGeral>
+        <BtnOnPrev onClick={onPrev}></BtnOnPrev>
+        <BtnOnNext onClick={onNext}></BtnOnNext>
+      </BtnGeral>
     </CentralStyle>
   );
 };
