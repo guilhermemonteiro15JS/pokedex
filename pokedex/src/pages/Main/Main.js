@@ -3,6 +3,7 @@ import {getGen1, kanto, getPokem} from '../../api'
 import PokeImage from '../../components/Central/PokeImage/PokeImage'
 import axios from 'axios';
 import Central from '../../components/Central/Central';
+import Right from '../../components/Right/Right';
 
 const Main = () => {
 const [pokedex, setPokedex] = useState([]);
@@ -64,7 +65,11 @@ setPokeNumber((prevNumber) => prevNumber +1)
  
   return (
     <div>
-         {pokemon ?<Central pokemon={pokemon} onPrev={handlePrev} onNext={handleNext}/> : "vazio"} 
+         {pokemon ?<Central pokemon={pokemon} onPrev={handlePrev} onNext={handleNext}/> 
+
+         : "vazio"} 
+           {pokemon ?<Right pokemon={pokemon} /> 
+         : "vazio"}
    
           
     </div>
