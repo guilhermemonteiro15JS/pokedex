@@ -71,4 +71,4 @@ setPokeNumber((prevNumber) => prevNumber +1)
   )
 }
 
-export default Main
+export default Main;

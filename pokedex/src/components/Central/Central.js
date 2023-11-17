@@ -17,7 +17,7 @@ const Central = ({ pokemon, onPrev, onNext}) => {
       <PokeName pokemon={pokemon} />
 
       <button onClick={onPrev}>Next</button>
-         <button onClick={onNext}>Next</button>
+      <button onClick={onNext}>Next</button>
     </CentralStyle>
   );
 };

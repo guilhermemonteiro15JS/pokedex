@@ -10,16 +10,16 @@ export const ImgPokeDiv = styled.div`
 width: 405px;
 height: 400px;
 background: #D9D9D9;
-position: absolute;
-left: 47px;
-top: 60px;
+position: relative;
 display: flex;
 align-items: center;
-justify-content: center;
+justify-content: start;
 border-radius: 10px;
 border: 2px solid #000;
+border-top-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 0px;
+border-right-width: 0px;
+left: 50px;
 overflow: hidden;
 `;
-
-
-
