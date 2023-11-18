@@ -55,15 +55,11 @@ const Main = () => {
     try {
       const response = await axios.get(url);
       console.log("Evolução:", response.data.chain);
-      setEvolutionChain(response.data.chain)
+      setEvolutionChain(response.data.chain);
     } catch (err) {
-        console.error("Erro ao obter a cadeia de evolução:", err);
-
+      console.error("Erro ao obter a cadeia de evolução:", err);
     }
   };
-
-
-
 
   useEffect(() => {
     fetchPokedex();
@@ -78,7 +74,6 @@ const Main = () => {
       getEvoChain(evolutionChainUrl);
     }
   }, [evolutionChainUrl]);
-
 
   const handlePrev = (e) => {
     setPokeNumber((prevNumber) => prevNumber - 1);
@@ -99,10 +94,17 @@ const Main = () => {
       </div>
       <Border />
 
-      {pokemon ? <Right pokemon={pokemon} pokeSpecie={pokeSpecie} evolutionChain={evolutionChain}  /> : "vazio"}
+      {pokemon ? (
+        <Right
+          pokemon={pokemon}
+          pokeSpecie={pokeSpecie}
+          evolutionChain={evolutionChain}
+        />
+      ) : (
+        "vazio"
+      )}
     </Pokedex>
   );
 };
 
 export default Main;
-
