@@ -9,7 +9,7 @@ const Right = ({ pokemon , pokeSpecie, evolutionChain}) => {
     <RightStyle >
       {<PokeDetails pokemon={pokemon} pokeSpecie={pokeSpecie}/>}
       <PokeStats pokemon={pokemon} />
-      <PokeEvoChain pokemon={pokemon} pokeSpecie={pokeSpecie} evolutionChain={evolutionChain} />
+      <PokeEvoChain evolutionChain={evolutionChain} />
     </RightStyle>
   );
 };

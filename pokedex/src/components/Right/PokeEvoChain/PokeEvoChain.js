@@ -1,7 +1,7 @@
 import React from 'react';
 import {PokeTypeH2, InfoContainer, EvolutionContainer, EvolutionImage } from "./styled";
 
-const PokeEvoChain = ({pokemon, pokeSpecie, evolutionChain}) => {
+const PokeEvoChain = ({ evolutionChain}) => {
 
     const renderEvolutions = () => {
         if (!evolutionChain) {
@@ -20,10 +20,10 @@ const PokeEvoChain = ({pokemon, pokeSpecie, evolutionChain}) => {
             console.log("currentPokemon:", currentPokemon);
           const { species, evolves_to } = currentPokemon;
           const pokemonName = species.name;
-          const pokeUrl= species.url.split("/")[6]
-          console.log("Poke url:", pokeUrl);
+          const pokeID= species.url.split("/")[6]
+          console.log("Poke url:", pokeID);
           
-          const pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeUrl}.png`;
+          const pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeID}.png`;
           evolutions.push(
             <EvolutionContainer key={pokemonName}>
               <EvolutionImage src={pokemonImage} alt={pokemonName} />
