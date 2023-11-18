@@ -12,7 +12,7 @@ const Main = () => {
   const [pokeNumber, setPokeNumber] = useState(0);
   const [pokeSpecie, setPokeSpecie] = useState(null);
   const [evolutionChainUrl, setEvolutionChainUrl] = useState(null);
-  const [evolutionUrls, setEvolutionUrls] = useState([]);
+  const [evolutionChain, setEvolutionChain] = useState([]);
 
   const fetchPokedex = async () => {
     try {
@@ -42,20 +42,27 @@ const Main = () => {
     } catch (err) {}
   };
 
-  const fetchDataForCurrentPokemon = () => {
+  const fetchDataForCurrentPokemon = async () => {
     if (pokedex.length > 0) {
       fetchPokemon(pokedex[pokeNumber].pokemon_species.name);
       fetchPokemonSpecies(pokedex[pokeNumber].pokemon_species.name);
+      await getEvoChain(evolutionChainUrl);
     }
   };
   const getEvoChain = async (url) => {
-    if (!evolutionChainUrl) return;
+    if (!url) return;
 
     try {
       const response = await axios.get(url);
-      console.log("Evolução:", response);
-    } catch (err) {}
+      console.log("Evolução:", response.data.chain);
+      setEvolutionChain(response.data.chain)
+    } catch (err) {
+        console.error("Erro ao obter a cadeia de evolução:", err);
+
+    }
   };
+
+
 
 
   useEffect(() => {
@@ -92,7 +99,7 @@ const Main = () => {
       </div>
       <Border />
 
-      {pokemon ? <Right pokemon={pokemon} pokeSpecie={pokeSpecie} /> : "vazio"}
+      {pokemon ? <Right pokemon={pokemon} pokeSpecie={pokeSpecie} evolutionChain={evolutionChain}  /> : "vazio"}
     </Pokedex>
   );
 };
