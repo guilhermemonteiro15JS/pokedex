@@ -10,6 +10,7 @@ export const getGen7 = "https://pokeapi.co/api/v2/generation/7/"
 export const getGen8 = "https://pokeapi.co/api/v2/generation/8/"
 
 export const kanto = "https://pokeapi.co/api/v2/pokedex/2/"
+export const Johto = "https://pokeapi.co/api/v2/pokedex/3/"
 
 export const getPokeSpecies = "https://pokeapi.co/api/v2/pokemon-species/"
 

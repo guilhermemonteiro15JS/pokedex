@@ -5,6 +5,7 @@ import axios from "axios";
 import Central from "../../components/Central/Central";
 import Right from "../../components/Right/Right";
 import { Pokedex, Border } from "./styled";
+import NavBar from "../../components/NavBar/NavBar";
 
 const Main = () => {
   const [pokedex, setPokedex] = useState([]);
@@ -13,10 +14,17 @@ const Main = () => {
   const [pokeSpecie, setPokeSpecie] = useState(null);
   const [evolutionChainUrl, setEvolutionChainUrl] = useState(null);
   const [evolutionChain, setEvolutionChain] = useState([]);
+  const [region, setRegion] = useState(null)
+
+  const handleRegion = (newRegion) =>{
+    setRegion(newRegion);
+    console.log(newRegion)
+  }
 
   const fetchPokedex = async () => {
+    console.log(region)
     try {
-      const pokex = await axios.get(kanto);
+      const pokex = await axios.get(region);
       console.log(pokex.data);
       setPokedex(pokex.data.pokemon_entries);
       console.log(pokedex);
@@ -63,7 +71,7 @@ const Main = () => {
 
   useEffect(() => {
     fetchPokedex();
-  }, []);
+  }, [region]);
 
   useEffect(() => {
     fetchDataForCurrentPokemon();
@@ -85,7 +93,9 @@ const Main = () => {
 
   return (
     <Pokedex>
+        <NavBar handleRegion={handleRegion}/>
       <div>
+        
         {pokemon ? (
           <Central pokemon={pokemon} onPrev={handlePrev} onNext={handleNext} />
         ) : (
