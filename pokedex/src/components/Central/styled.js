@@ -46,8 +46,8 @@ export const NavigationButtonsContainer = styled.div`
 export const BtnOnNext = styled.button`
   width: 110px;
   height: 20px;
-  background: url("../../assets/Buttontogoright.png");
-  /* border: none; */
+  background: url("/Buttontogoright.png");
+   border: none;
   border-radius: 70%;
   cursor: pointer;
   margin-left:100px;
@@ -55,8 +55,8 @@ export const BtnOnNext = styled.button`
 export const BtnOnPrev = styled.button`
   width: 110px;
   height: 20px;
-  background:url("../../assets/Buttontogoleft.png");
-  /* border: none; */
+  background-image :url("/Buttontogoleft.png");
+   border: none;
   border-radius: 70%;
   cursor: pointer;
 `
