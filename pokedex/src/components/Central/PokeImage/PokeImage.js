@@ -3,10 +3,10 @@ import { ImgPoke, ImgPokeDiv } from "./styled";
 
 const PokeImage = ({ pokemon }) => {
 
-    
   return (
     <ImgPokeDiv>
-      <ImgPoke src={pokemon.data.sprites.other.home.front_default}/>
+      <ImgPoke src={pokemon.data.sprites.other["official-artwork"].front_default}/>
+      
     </ImgPokeDiv>
   );
 };
