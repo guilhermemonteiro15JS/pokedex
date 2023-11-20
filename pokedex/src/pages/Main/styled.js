@@ -1,9 +1,14 @@
 import { styled } from "styled-components";
 
+
 export const Pokedex = styled.div`
 display: flex;
 align-content: column;
 left: 30px;
+background-image:url(${props => props.bkImage});
+background-size: cover;
+background-repeat: no-repeat;
+height:100vh;
 `;
 
 export const Border = styled.div`

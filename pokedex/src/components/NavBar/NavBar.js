@@ -7,7 +7,8 @@ const NavBar = ({ handleRegion }) => {
       handleRegion(newState); */
 
     const gen1 = "https://pokeapi.co/api/v2/pokemon/?limit=151";
-    handleRegion(gen1);
+    const bkImage = "/Gen1_Map.png"
+    handleRegion(gen1, bkImage);
   };
 
   const handleGen2 = () => {
@@ -17,12 +18,14 @@ const NavBar = ({ handleRegion }) => {
         handleRegion(newState); */
 
     const gen2 = "https://pokeapi.co/api/v2/pokemon/?offset=151&limit=100";
-    handleRegion(gen2);
+    const bkImage = "/Gen2_Map.png"
+    handleRegion(gen2, bkImage);
   };
 
   const handleGen3 = () => {
     const gen3 = "https://pokeapi.co/api/v2/pokemon/?offset=251&limit=135";
-    handleRegion(gen3);
+    const bkImage = "/Gen3_Map.png"
+    handleRegion(gen3, bkImage);
   };
   
   const handleGen4 = () => {
