@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from "react";
-import { getGen1, kanto, getPokem, getPokeSpecies } from "../../api";
+import {getPokem, getPokeSpecies } from "../../api";
 
 import axios from "axios";
 import Central from "../../components/Central/Central";
@@ -26,8 +26,9 @@ const Main = () => {
     try {
       const pokex = await axios.get(region);
       console.log(pokex.data);
-      setPokedex(pokex.data.pokemon_entries);
-      console.log(pokedex);
+      setPokedex(pokex.data.results);
+      console.log(`pokedex ${pokedex}`);
+        setPokeNumber(0);
     } catch (err) {}
   };
 
@@ -52,8 +53,8 @@ const Main = () => {
 
   const fetchDataForCurrentPokemon = async () => {
     if (pokedex.length > 0) {
-      fetchPokemon(pokedex[pokeNumber].pokemon_species.name);
-      fetchPokemonSpecies(pokedex[pokeNumber].pokemon_species.name);
+      fetchPokemon(pokedex[pokeNumber].name);
+      fetchPokemonSpecies(pokedex[pokeNumber].name);
       await getEvoChain(evolutionChainUrl);
     }
   };
