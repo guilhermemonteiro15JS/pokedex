@@ -4,7 +4,7 @@ import {getPokem, getPokeSpecies } from "../../api";
 import axios from "axios";
 import Central from "../../components/Central/Central";
 import Right from "../../components/Right/Right";
-import { Pokedex, Border } from "./styled";
+import { Pokedex, Border, PokedexMini } from "./styled";
 import NavBar from "../../components/NavBar/NavBar";
 
 const Main = () => {
@@ -93,8 +93,10 @@ const Main = () => {
   };
 
   return (
+
     <Pokedex>
-        <NavBar handleRegion={handleRegion}/>
+    <NavBar handleRegion={handleRegion}/>
+     <PokedexMini>  
       <div>
         
         {pokemon ? (
@@ -114,6 +116,7 @@ const Main = () => {
       ) : (
         "vazio"
       )}
+      </PokedexMini> 
     </Pokedex>
   );
 };
