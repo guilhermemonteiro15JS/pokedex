@@ -8,9 +8,9 @@ justify-content: center;
 
 export const Border = styled.div`
 width: 14px;
-height: 715px;
+height: 680px;
 position: relative;
-top: 18px;
+top: 13px;
 border-radius: 3px;
 background: #C1132A;
 `;

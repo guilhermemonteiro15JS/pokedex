@@ -1,6 +1,6 @@
 
 import React, {useState} from "react";
-import { NavBarStyle, Button } from "./styled";
+import { NavBarStyle, Button, ImagemPoke, DivButton } from "./styled";
 
 const NavBar = ({ handleRegion }) => {
   const [selectedGen, setSelectedGen] = useState(null);
@@ -12,6 +12,8 @@ const NavBar = ({ handleRegion }) => {
 
   return (
     <NavBarStyle>
+      <ImagemPoke src="/PokémonLogo.png" alt="Pokémon"/>
+      <DivButton>
       <Button isSelected={selectedGen === "https://pokeapi.co/api/v2/pokemon/?limit=151"} onClick={() => handleGen("https://pokeapi.co/api/v2/pokemon/?limit=151")}>Gen1</Button>
       <Button isSelected={selectedGen === "https://pokeapi.co/api/v2/pokemon/?offset=151&limit=100"} onClick={() => handleGen("https://pokeapi.co/api/v2/pokemon/?offset=151&limit=100")}>Gen2</Button>
       <Button isSelected={selectedGen === "https://pokeapi.co/api/v2/pokemon/?offset=251&limit=135"}onClick={() => handleGen("https://pokeapi.co/api/v2/pokemon/?offset=251&limit=135")}>Gen3</Button>
@@ -21,6 +23,7 @@ const NavBar = ({ handleRegion }) => {
       <Button isSelected={selectedGen === "https://pokeapi.co/api/v2/pokemon/?offset=721&limit=88"}onClick={() => handleGen("https://pokeapi.co/api/v2/pokemon/?offset=721&limit=88")}>Gen7</Button>
       <Button isSelected={selectedGen === "https://pokeapi.co/api/v2/pokemon/?offset=809&limit=96"}onClick={() => handleGen("https://pokeapi.co/api/v2/pokemon/?offset=809&limit=96")}>Gen8</Button>
       <Button isSelected={selectedGen === "https://pokeapi.co/api/v2/pokemon/?offset=905&limit=103"}onClick={() => handleGen("https://pokeapi.co/api/v2/pokemon/?offset=905&limit=103")}>Gen9</Button>
+      </DivButton>
     </NavBarStyle>
   );
 };
