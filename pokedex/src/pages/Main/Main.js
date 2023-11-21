@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from "react";
-import {getPokem, getPokeSpecies } from "../../api";
+import { getPokem, getPokeSpecies } from "../../api";
 
 import axios from "axios";
 import Central from "../../components/Central/Central";
@@ -14,21 +14,23 @@ const Main = () => {
   const [pokeSpecie, setPokeSpecie] = useState(null);
   const [evolutionChainUrl, setEvolutionChainUrl] = useState(null);
   const [evolutionChain, setEvolutionChain] = useState([]);
-  const [region, setRegion] = useState(null)
+  const [region, setRegion] = useState(null);
+  const [bkImage, setBkImage] = useState(null);
 
-  const handleRegion = (newRegion) =>{
+  const handleRegion = (newRegion, bkImage) => {
     setRegion(newRegion);
-    console.log(newRegion)
-  }
+    /* console.log(newRegion) */
+    setBkImage(bkImage)
+  };
 
   const fetchPokedex = async () => {
-    console.log(region)
+    console.log(region);
     try {
       const pokex = await axios.get(region);
       console.log(pokex.data);
       setPokedex(pokex.data.results);
-      console.log(`pokedex ${pokedex}`);
-        setPokeNumber(0);
+      /* console.log(`pokedex ${pokedex}`); */
+      setPokeNumber(0);
     } catch (err) {}
   };
 
@@ -98,13 +100,13 @@ const Main = () => {
     <NavBar handleRegion={handleRegion}/>
      <PokedexMini>  
       <div>
-        
+      
         {pokemon ? (
           <Central pokemon={pokemon} onPrev={handlePrev} onNext={handleNext} />
         ) : (
           "vazio"
         )}
-      </div>
+      </div> 
       <Border />
 
       {pokemon ? (
