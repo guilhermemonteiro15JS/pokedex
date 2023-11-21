@@ -5,9 +5,7 @@ const PokeImage = ({ pokemon }) => {
   const [pokeTypeImg, setPokeTypeImg] = useState(null);
 
   useEffect(() => {
-    // Use useEffect to update the state only when necessary
     if (pokemon.data.types[0].type.name === "grass") {
-      console.log("Erba");
       setPokeTypeImg("/bk-grass.png");
     } else if (pokemon.data.types[0].type.name === "fire") {
       setPokeTypeImg("/bk-fire.png");
@@ -27,18 +25,27 @@ const PokeImage = ({ pokemon }) => {
       setPokeTypeImg("/bk-fight.png");
     } else if (pokemon.data.types[0].type.name === "ground") {
       setPokeTypeImg("/bk-ground.png");
-    }else if (pokemon.data.types[0].type.name === "poison") {
+    } else if (pokemon.data.types[0].type.name === "poison") {
       setPokeTypeImg("/bk-poison.png");
-    }else if (pokemon.data.types[0].type.name === "bug") {
+    } else if (pokemon.data.types[0].type.name === "bug") {
       setPokeTypeImg("/bk-bug.png");
-    }else if (pokemon.data.types[0].type.name === "fairy") {
+    } else if (pokemon.data.types[0].type.name === "fairy") {
       setPokeTypeImg("/bk-fairy.png");
-    }else if (pokemon.data.types[0].type.name === "rock") {
+    } else if (pokemon.data.types[0].type.name === "rock") {
       setPokeTypeImg("/bk-rock.png");
-    }else if (pokemon.data.types[0].type.name === "ice") {
+    } else if (pokemon.data.types[0].type.name === "ice") {
       setPokeTypeImg("/bk-ice.png");
+    } else if (
+      pokemon.data.types[0].type.name === "ghost" ||
+      pokemon.data.types[0].type.name === "shadow"
+    ) {
+      setPokeTypeImg("/bk-ghost.png");
+    } else if (pokemon.data.types[0].type.name === "flying") {
+      setPokeTypeImg("/bk-flying.png");
+    } else if (pokemon.data.types[0].type.name === "steel") {
+      setPokeTypeImg("/bk-steel.png");
     }
-  }, [pokemon.data.types]); // Monitor changes in the types array
+  }, [pokemon.data.types]);
 
   return (
     <ImgPokeDiv>
