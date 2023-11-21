@@ -1,6 +1,3 @@
+export const getPokeSpecies = "https://pokeapi.co/api/v2/pokemon-species/";
 
-
-
-export const getPokeSpecies = "https://pokeapi.co/api/v2/pokemon-species/"
-
-export const getPokem = "https://pokeapi.co/api/v2/pokemon/"
+export const getPokem = "https://pokeapi.co/api/v2/pokemon/";

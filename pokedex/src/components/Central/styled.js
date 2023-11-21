@@ -48,16 +48,25 @@ export const BtnOnNext = styled.button`
   height: 20px;
   background: url("/Buttontogoright.png");
    border: none;
-  border-radius: 70%;
+  border-radius: 60%;
   cursor: pointer;
   margin-left:100px;
+
+  &:hover{
+    filter: brightness(1.2); 
+}
 `
 export const BtnOnPrev = styled.button`
   width: 110px;
   height: 20px;
   background-image :url("/Buttontogoleft.png");
+  background-repeat:no-repeat;
    border: none;
-  border-radius: 70%;
+  border-radius: 60%;
   cursor: pointer;
+
+  &:hover{
+    filter: brightness(1.2); 
+  }
 `
 
