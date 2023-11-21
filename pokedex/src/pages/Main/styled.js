@@ -1,21 +1,22 @@
 import { styled } from "styled-components";
 
-
-export const Pokedex = styled.div`
+export const PokedexMini = styled.div`
 display: flex;
-align-content: column;
-left: 30px;
-background-image:url(${props => props.bkImage});
-background-size: cover;
-background-repeat: no-repeat;
-height:100vh;
+align-items: center;
+justify-content: center;
 `;
 
 export const Border = styled.div`
 width: 14px;
-height: 715px;
+height: 680px;
 position: relative;
-top: 18px;
+top: 13px;
 border-radius: 3px;
 background: #C1132A;
+`;
+
+export const Pokedex = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
 `;

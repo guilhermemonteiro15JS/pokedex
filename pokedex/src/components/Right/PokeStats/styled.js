@@ -8,6 +8,9 @@ justify-content: center;
 `;
 export const PokeStatsUl = styled.ul`
 margin:0px; 
+display:flex;
+flex-direction: column;
+gap: 8px;
 `;
 
 export const Status = styled.div`
