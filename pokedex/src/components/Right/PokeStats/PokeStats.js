@@ -1,5 +1,5 @@
 import React from 'react';
-import { Status, PokeStatsH2, PokeStatsUl } from './styled';
+import { Status, PokeStatsH2, PokeStatsUl, InfoStatus, ProgressBarContainer } from './styled';
 import ProgressBar from "../ProgressBar/ProgressBar"; 
 
 const calculatePercentage = (baseStat) => {
@@ -13,10 +13,17 @@ const PokeStats = ({ pokemon }) => {
       <PokeStatsUl>
         {pokemon.data.stats.map((stat, index) => (
           <li key={index}>
-            <div>
+            <InfoStatus>
+              <div>
               <span>{stat.stat.name}</span>
+              </div>
+              {/* <ProgressBarContainer> */}
               <ProgressBar percentage={calculatePercentage(stat.base_stat)} />
-            </div>
+              {/* </ProgressBarContainer> */}
+              <div>
+              <span> {stat.base_stat}</span>
+              </div>
+            </InfoStatus>
           </li>
         ))}
       </PokeStatsUl>
