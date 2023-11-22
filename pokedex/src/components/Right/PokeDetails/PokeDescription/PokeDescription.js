@@ -1,13 +1,18 @@
-import React from 'react';
-import { DescriptionH2, PokeDescriptionDiv, TextP } from './styled';
+import React from "react";
+import { DescriptionH2, PokeDescriptionDiv, TextP } from "./styled";
 
-const PokeDescription = ({pokeSpecie}) => {
+const PokeDescription = ({ pokeSpecie }) => {
+  const engDescription = pokeSpecie.data.flavor_text_entries.find(
+    (desc) => desc.language.name === "en"
+  );
   return (
     <PokeDescriptionDiv>
-        <DescriptionH2>Description:</DescriptionH2>
-        <TextP>{pokeSpecie.data.flavor_text_entries[0].flavor_text}</TextP>
+      <DescriptionH2>Description:</DescriptionH2>
+      {engDescription && (
+        <TextP>{engDescription.flavor_text} </TextP>
+      )}
     </PokeDescriptionDiv>
-  )
-}
+  );
+};
 
-export default PokeDescription
+export default PokeDescription;

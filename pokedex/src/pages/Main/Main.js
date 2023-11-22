@@ -17,46 +17,54 @@ const Main = () => {
   const [region, setRegion] = useState(null);
   const [bkImage, setBkImage] = useState(null);
 
+  const regionLenght = pokedex.length;
+
   const handleRegion = (newRegion, bkImage) => {
     setRegion(newRegion);
-    /* console.log(newRegion) */
-    setBkImage(bkImage)
+    setBkImage(bkImage);
   };
 
   const fetchPokedex = async () => {
     console.log(region);
     try {
       const pokex = await axios.get(region);
-      console.log(pokex.data);
+      console.log(pokex);
       setPokedex(pokex.data.results);
-      /* console.log(`pokedex ${pokedex}`); */
       setPokeNumber(0);
-    } catch (err) {}
+    } catch (err) {
+      console.error(err);
+    }
   };
 
-  const fetchPokemon = async (pokemonName) => {
+  const fetchPokemon = async (pokemonID) => {
     try {
-      const pokeData = await axios.get(`${getPokem}${pokemonName}`);
+      const pokeData = await axios.get(`${getPokem}${pokemonID}`);
       console.log(pokeData.data);
       setPokemon(pokeData);
-    } catch (err) {}
+    } catch (err) {
+      console.error(err);
+    }
   };
 
-  const fetchPokemonSpecies = async (pokemonName) => {
+  const fetchPokemonSpecies = async (pokemonID) => {
     try {
-      const pokem = await axios.get(`${getPokeSpecies}${pokemonName}`);
+      const pokem = await axios.get(`${getPokeSpecies}${pokemonID}`);
       console.log(pokem.data);
       setPokeSpecie(pokem);
       const evolutionChainUrl = pokem.data.evolution_chain.url;
       console.log(evolutionChainUrl);
       setEvolutionChainUrl(evolutionChainUrl);
-    } catch (err) {}
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   const fetchDataForCurrentPokemon = async () => {
     if (pokedex.length > 0) {
-      fetchPokemon(pokedex[pokeNumber].name);
-      fetchPokemonSpecies(pokedex[pokeNumber].name);
+      const pokUrls = pokedex[pokeNumber].url;
+      const PokeID = pokUrls.split("/")[6];
+      fetchPokemon(PokeID);
+      fetchPokemonSpecies(PokeID);
       await getEvoChain(evolutionChainUrl);
     }
   };
@@ -68,7 +76,7 @@ const Main = () => {
       console.log("Evolução:", response.data.chain);
       setEvolutionChain(response.data.chain);
     } catch (err) {
-      console.error("Erro ao obter a cadeia de evolução:", err);
+      console.error(err);
     }
   };
 
@@ -96,28 +104,33 @@ const Main = () => {
 
   return (
     <Pokedex bkImage={bkImage}>
-    <NavBar handleRegion={handleRegion}/>
-     <PokedexMini>  
-      <div>
-      
+      <NavBar handleRegion={handleRegion} />
+      <PokedexMini>
+        <div>
+          {pokemon ? (
+            <Central
+              pokemon={pokemon}
+              onPrev={handlePrev}
+              onNext={handleNext}
+              regionLenght={regionLenght}
+              pokeNumber={pokeNumber}
+            />
+          ) : (
+            "vazio"
+          )}
+        </div>
+        <Border />
+
         {pokemon ? (
-          <Central pokemon={pokemon} onPrev={handlePrev} onNext={handleNext} />
+          <Right
+            pokemon={pokemon}
+            pokeSpecie={pokeSpecie}
+            evolutionChain={evolutionChain}
+          />
         ) : (
           "vazio"
         )}
-      </div> 
-      <Border />
-
-      {pokemon ? (
-        <Right
-          pokemon={pokemon}
-          pokeSpecie={pokeSpecie}
-          evolutionChain={evolutionChain}
-        />
-      ) : (
-        "vazio"
-      )}
-      </PokedexMini> 
+      </PokedexMini>
     </Pokedex>
   );
 };
