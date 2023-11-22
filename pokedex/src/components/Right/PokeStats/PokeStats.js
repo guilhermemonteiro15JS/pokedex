@@ -1,6 +1,12 @@
-import React from 'react';
-import { Status, PokeStatsH2, PokeStatsUl, InfoStatus, ProgressBarContainer } from './styled';
-import ProgressBar from "../ProgressBar/ProgressBar"; 
+import React from "react";
+import {
+  Status,
+  PokeStatsH2,
+  PokeStatsUl,
+  InfoStatus,
+  ProgressBarContainer,
+} from "./styled";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 const calculatePercentage = (baseStat) => {
   return baseStat;
@@ -12,19 +18,18 @@ const PokeStats = ({ pokemon }) => {
       <PokeStatsH2>Stats:</PokeStatsH2>
       <PokeStatsUl>
         {pokemon.data.stats.map((stat, index) => (
-          <li key={index}>
-            <InfoStatus>
-              <div>
+
+            <InfoStatus key={index}>
+              <td>
               <span>{stat.stat.name}</span>
-              </div>
-              {/* <ProgressBarContainer> */}
+              </td>
+              <td>
               <ProgressBar percentage={calculatePercentage(stat.base_stat)} />
-              {/* </ProgressBarContainer> */}
-              <div>
+              </td>
+              <td>
               <span> {stat.base_stat}</span>
-              </div>
+              </td>
             </InfoStatus>
-          </li>
         ))}
       </PokeStatsUl>
     </Status>

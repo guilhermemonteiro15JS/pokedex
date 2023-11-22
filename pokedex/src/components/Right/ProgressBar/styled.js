@@ -1,16 +1,11 @@
 import { styled } from "styled-components";
 
 export const ProgressBarWrapper= styled.div`
-width:50%;
+width: 200px;
 height: 10px;
 background-color: #eee;
 border-radius: 4px;
 overflow: hidden;
-display: flex;
-flex-direction: row;
-align-items: center;
-flex-grow: 1;
-margin-left: 20px;
 `;
 
 export const ProgressBarFill= styled.div`

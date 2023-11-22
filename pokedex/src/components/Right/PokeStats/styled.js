@@ -6,10 +6,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 `;
-export const PokeStatsUl = styled.ul`
-display:flex;
-flex-direction: column;
-justify-content: space-between;
+export const PokeStatsUl = styled.table`
+
 `;
 
 export const Status = styled.div`
@@ -27,12 +25,8 @@ background: #FC9E4F;
 font-size: 15px;
 `;
 
-export const InfoStatus = styled.div`
-display:flex;
-flex-direction: row; 
-align-items: center;
-justify-content: space-between;
-gap:2px;
+export const InfoStatus = styled.tr`
+
 `;
 
 export const ProgressBarContainer = styled.div`
