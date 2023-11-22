@@ -10,7 +10,11 @@ import {
   BtnOnPrev,
 } from "./styled";
 
-const Central = ({ pokemon, onPrev, onNext }) => {
+const Central = ({ pokemon, onPrev, onNext, regionLenght, pokeNumber }) => {
+  const prevPokemon = pokeNumber > 0;
+
+  const nextPokemon = pokeNumber < regionLenght - 1;
+
   return (
     <CentralStyle>
       <BrowserButtonsContainer>
@@ -21,8 +25,8 @@ const Central = ({ pokemon, onPrev, onNext }) => {
       <PokeImage pokemon={pokemon} />
       <PokeName pokemon={pokemon} />
       <NavigationButtonsContainer>
-        <BtnOnPrev onClick={onPrev}></BtnOnPrev>
-        <BtnOnNext onClick={onNext}></BtnOnNext>
+        <BtnOnPrev onClick={onPrev} disabled={!prevPokemon}></BtnOnPrev>
+        <BtnOnNext onClick={onNext} disabled={!nextPokemon}></BtnOnNext>
       </NavigationButtonsContainer>
     </CentralStyle>
   );
