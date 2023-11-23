@@ -1,5 +1,6 @@
 import React from 'react';
-import { PokeTypeH2, PokeTypeUl } from './styled';
+import { PokeTypeH2, PokeTypeUl, StyledImage, Table } from './styled';
+import { getTypeImage } from '../SourceForType/SourceForType';
 
 const PokeType = ({pokemon}) => {
   return (
@@ -7,7 +8,12 @@ const PokeType = ({pokemon}) => {
            <PokeTypeH2>Types:</PokeTypeH2>
       <PokeTypeUl>
         {pokemon.data.types.map((type, index) => (
-          <li key={index}> {type.type.name} </li>
+          <Table key={index}> 
+          <StyledImage 
+          src= { getTypeImage(type.type.name)}
+          alt= {type.type.name}/>
+          {type.type.name}
+           </Table>
         ))}
       </PokeTypeUl>
     </div>
