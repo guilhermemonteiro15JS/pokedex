@@ -32,8 +32,8 @@ export const getTypeImage = (type) =>{
             return process.env.PUBLIC_URL +'bk-normal.png';
         case 'poison':
             return process.env.PUBLIC_URL +'bk-poison.png';
-        case 'phychic':
-            return process.env.PUBLIC_URL +'bk-phychic.png';
+        case 'psychic':
+            return process.env.PUBLIC_URL +'bk-psychic.png';
         case 'steel':
             return process.env.PUBLIC_URL +'bk-steel.png';    
 
