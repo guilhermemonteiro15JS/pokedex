@@ -4,7 +4,7 @@ import { getPokem, getPokeSpecies } from "../../api";
 import axios from "axios";
 import Central from "../../components/Central/Central";
 import Right from "../../components/Right/Right";
-import { Pokedex, Border, PokedexMini } from "./styled";
+import { Pokedex, Border, BorderTwo, PokedexMini } from "./styled";
 import NavBar from "../../components/NavBar/NavBar";
 import Left from "../../components/Left/Left";
 
@@ -27,7 +27,7 @@ const Main = () => {
     setBkImage(bkImage);
   };
 
-  const handleSearch = (searchFor, ) => {
+  const handleSearch = (searchFor) => {
     console.log("Searching for:", searchFor);
     try {
       setPokeID(searchFor);
@@ -134,8 +134,10 @@ const Main = () => {
         {pokemon ? (
           <Left handleSearch={handleSearch} handleRegion={handleRegion} />
         ) : (
-          "vazio"
+          ""
         )}
+
+        {pokemon ? <BorderTwo /> : ""}
         {pokemon ? (
           <Central
             pokemon={pokemon}
@@ -145,10 +147,10 @@ const Main = () => {
             pokeNumber={pokeNumber}
           />
         ) : (
-          "vazio"
+          ""
         )}
 
-        <Border />
+        {pokemon ? <Border /> : "" }
 
         {pokemon ? (
           <Right
@@ -157,7 +159,7 @@ const Main = () => {
             evolutionChain={evolutionChain}
           />
         ) : (
-          "vazio"
+          ""
         )}
       </PokedexMini>
     </Pokedex>

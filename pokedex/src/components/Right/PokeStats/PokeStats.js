@@ -9,7 +9,7 @@ import {
 import ProgressBar from "../ProgressBar/ProgressBar";
 
 const calculatePercentage = (baseStat) => {
-  return baseStat;
+  return (baseStat/150) * 100;
 };
 
 const PokeStats = ({ pokemon }) => {
