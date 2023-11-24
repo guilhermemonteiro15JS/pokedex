@@ -10,4 +10,4 @@ const Left = ({handleSearch, pokemon}) => {
   )
 }
 
-export default Left
+export default Left;

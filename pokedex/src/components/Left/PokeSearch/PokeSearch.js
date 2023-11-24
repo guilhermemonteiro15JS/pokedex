@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { SearchDiv, Input } from "./styled";
 
 const PokeSearch = ({handleSearch, pokemon}) => {
     const [searchText, setSearchText] = useState("")
@@ -18,13 +19,18 @@ const PokeSearch = ({handleSearch, pokemon}) => {
       };
 
   return (
-    <div>
+    <SearchDiv>
       <form onSubmit={handleSubmit}>
-        <input
+        <Input
           type="text"
           name="search"
           id="search"
           placeholder="Search for a pokemon"
+          style={{
+            color: '#0c4767',
+            placeholder: '#0c4767',
+          }}
+
           value={pokemon}
           onChange={(e) => setSearchText(e.target.value)}
         />
@@ -32,7 +38,7 @@ const PokeSearch = ({handleSearch, pokemon}) => {
           Search
         </button>
       </form>
-    </div>
+    </SearchDiv>
   );
 };
 
