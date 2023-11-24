@@ -27,7 +27,7 @@ const Main = () => {
     setBkImage(bkImage);
   };
 
-  const handleSearch = (searchFor) => {
+  const handleSearch = (searchFor, ) => {
     console.log("Searching for:", searchFor);
     try {
       setPokeID(searchFor);

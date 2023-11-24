@@ -3,11 +3,11 @@ import { SearchDiv, Input } from "./styled";
 
 const PokeSearch = ({handleSearch, pokemon}) => {
     const [searchText, setSearchText] = useState("")
-
+    const nationalPokedex = "https://pokeapi.co/api/v2/pokedex/1"
 
     const handleClick = () => {
         if(searchText.length>0){
-        handleSearch(searchText);
+        handleSearch(searchText, );
         }else{
             handleSearch("pikachu")
         }
