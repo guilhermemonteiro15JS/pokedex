@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react";
 import { PokeFilterUl, InfoFilter } from "./styled";
 
 const Filter = (pokemon) => {
@@ -45,3 +45,4 @@ const Filter = (pokemon) => {
 };
 
 export default Filter;
+ */
