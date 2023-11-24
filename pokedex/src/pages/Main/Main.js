@@ -22,6 +22,7 @@ const Main = () => {
   const regionLenght = pokedex.length;
 
   const handleRegion = (newRegion, bkImage) => {
+    console.log("region",newRegion)
     setRegion(newRegion);
     setBkImage(bkImage);
   };
@@ -37,11 +38,14 @@ const Main = () => {
     }
   };
 
+ 
+
   const fetchPokedex = async () => {
     try {
       const pokex = await axios.get(region);
-      setPokedex(pokex.data.results);
+      setPokedex(pokex.data.results ? pokex.data.results : pokex.data.pokemon);
       setPokeNumber(0);
+      console.log("region",pokex)
     } catch (err) {
       console.error(err);
     }
@@ -50,7 +54,7 @@ const Main = () => {
   const fetchPokemon = async (pokemonID) => {
     if (pokemonID === null) {
       console.warn("Invalid pokemonID:", pokemonID);
-      return; 
+      return;
     }
     const url = `${getPokem}${pokemonID}`;
     console.log("Pokemon API URL:", url);
@@ -76,7 +80,7 @@ const Main = () => {
 
   const fetchDataForCurrentPokemon = async () => {
     if (pokedex.length > 0) {
-      const pokUrls = pokedex[pokeNumber].url;
+      const pokUrls = (pokedex[pokeNumber].url ?pokedex[pokeNumber].url : pokedex[pokeNumber].pokemon.url );
       const PokeID = pokUrls.split("/")[6];
       setPokeID(PokeID);
       fetchPokemon(pokeID);
@@ -127,9 +131,8 @@ const Main = () => {
     <Pokedex bkImage={bkImage}>
       <NavBar handleRegion={handleRegion} />
       <PokedexMini>
-      {pokemon ? (
-          <Left handleSearch={handleSearch}
-          />
+        {pokemon ? (
+          <Left handleSearch={handleSearch} handleRegion={handleRegion} />
         ) : (
           "vazio"
         )}

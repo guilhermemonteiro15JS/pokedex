@@ -14,8 +14,8 @@ export const getTypeImage = (type) =>{
             return process.env.PUBLIC_URL +'./images_Type/electric.png';
         case 'fairy':
           return process.env.PUBLIC_URL +'./images_Type/fairy.png';
-        case 'fight':
-          return process.env.PUBLIC_URL +'./images_Type/fight.png';
+        case 'fighting':
+          return process.env.PUBLIC_URL +'./images_Type/fighting.png';
         case 'fire':
             return process.env.PUBLIC_URL +'./images_Type/fire.png';
         case 'flying':

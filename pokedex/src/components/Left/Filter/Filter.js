@@ -46,3 +46,45 @@ const Filter = (pokemon) => {
 
 export default Filter;
  */
+
+import  { React,useState }from 'react'
+
+const Filter = ({handleRegion}) => {
+  const [selectedType, setSelectedType] = useState(null);
+
+  
+
+  const handleType = (type) => {
+    const gen1 = `https://pokeapi.co/api/v2/type/${type}`;
+    const bkImage = "/Gen1_Map.png";
+    setSelectedType(gen1);
+    handleRegion(gen1, bkImage);
+  };
+
+  return (
+    <div>Filter
+      <button onClick={() => handleType("normal")}>Normal</button>
+      <button onClick={() => handleType("fire")}>Fire</button>
+      <button onClick={() => handleType("grass")}>Grass</button>
+      <button onClick={() => handleType("water")}>Water</button>
+      <button onClick={() => handleType("bug")}>Bug</button>
+      <button onClick={() => handleType("dark")}>Dark</button>
+      <button onClick={() => handleType("dragon")}>Dragon</button>
+      <button onClick={() => handleType("electric")}>electric</button>
+      <button onClick={() => handleType("fairy")}>Fairy</button>
+      <button onClick={() => handleType("fighting")}>Fighting</button>
+      <button onClick={() => handleType("flying")}>Flying</button>
+      <button onClick={() => handleType("ghost")}>Ghost</button>
+      <button onClick={() => handleType("ground")}>Ground</button>
+      <button onClick={() => handleType("ice")}>Ice</button>
+      <button onClick={() => handleType("psychic")}>Psychic</button>
+      <button onClick={() => handleType("poison")}>Poison</button>
+      <button onClick={() => handleType("rock")}>Rock</button>
+      <button onClick={() => handleType("steel")}>Steel</button>
+    </div>
+  )
+}
+
+export default Filter
+
+
