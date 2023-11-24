@@ -1,7 +1,7 @@
 import { styled} from "styled-components";
 
 export const PokeTypeH2 = styled.h2`
-margin-top: 20px;
+margin-top: 0px;
 margin-bottom: 0px;
 `;
 
