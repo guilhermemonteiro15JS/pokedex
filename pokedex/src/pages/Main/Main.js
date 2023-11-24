@@ -22,30 +22,28 @@ const Main = () => {
   const regionLenght = pokedex.length;
 
   const handleRegion = (newRegion, bkImage) => {
-    console.log("region",newRegion)
+    console.log("region", newRegion);
     setRegion(newRegion);
     setBkImage(bkImage);
   };
 
-  const handleSearch = (pokeCenas) => {
-    console.log("Searching for:", pokeCenas);
+  const handleSearch = (searchFor) => {
+    console.log("Searching for:", searchFor);
     try {
-      setPokeID(pokeCenas);
-      console.log("New pokeID:", pokeCenas);
+      setPokeID(searchFor);
+      console.log("New pokeID:", searchFor);
       setPokedex([]);
     } catch (error) {
       console.error("Error in handleSearch:", error);
     }
   };
 
- 
-
   const fetchPokedex = async () => {
     try {
       const pokex = await axios.get(region);
       setPokedex(pokex.data.results ? pokex.data.results : pokex.data.pokemon);
       setPokeNumber(0);
-      console.log("region",pokex)
+      console.log("region", pokex);
     } catch (err) {
       console.error(err);
     }
@@ -80,7 +78,9 @@ const Main = () => {
 
   const fetchDataForCurrentPokemon = async () => {
     if (pokedex.length > 0) {
-      const pokUrls = (pokedex[pokeNumber].url ?pokedex[pokeNumber].url : pokedex[pokeNumber].pokemon.url );
+      const pokUrls = pokedex[pokeNumber].url
+        ? pokedex[pokeNumber].url
+        : pokedex[pokeNumber].pokemon.url;
       const PokeID = pokUrls.split("/")[6];
       setPokeID(PokeID);
       fetchPokemon(pokeID);

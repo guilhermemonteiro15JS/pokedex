@@ -47,22 +47,18 @@ const Filter = (pokemon) => {
 export default Filter;
  */
 
-import  { React,useState }from 'react'
+import { React } from "react";
 
-const Filter = ({handleRegion}) => {
-  const [selectedType, setSelectedType] = useState(null);
-
-  
-
+const Filter = ({ handleRegion }) => {
   const handleType = (type) => {
-    const gen1 = `https://pokeapi.co/api/v2/type/${type}`;
+    const filterByType = `https://pokeapi.co/api/v2/type/${type}`;
     const bkImage = "/Gen1_Map.png";
-    setSelectedType(gen1);
-    handleRegion(gen1, bkImage);
+    handleRegion(filterByType, bkImage);
   };
 
   return (
-    <div>Filter
+    <div>
+      Filter
       <button onClick={() => handleType("normal")}>Normal</button>
       <button onClick={() => handleType("fire")}>Fire</button>
       <button onClick={() => handleType("grass")}>Grass</button>
@@ -82,9 +78,7 @@ const Filter = ({handleRegion}) => {
       <button onClick={() => handleType("rock")}>Rock</button>
       <button onClick={() => handleType("steel")}>Steel</button>
     </div>
-  )
-}
+  );
+};
 
-export default Filter
-
-
+export default Filter;
