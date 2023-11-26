@@ -18,20 +18,16 @@ const Main = () => {
   const [region, setRegion] = useState(null);
   const [bkImage, setBkImage] = useState(null);
   const [pokeID, setPokeID] = useState(null);
-
   const regionLenght = pokedex.length;
 
   const handleRegion = (newRegion, bkImage) => {
-    console.log("region", newRegion);
     setRegion(newRegion);
     setBkImage(bkImage);
   };
 
   const handleSearch = (searchFor) => {
-    console.log("Searching for:", searchFor);
     try {
       setPokeID(searchFor);
-      console.log("New pokeID:", searchFor);
       setPokedex([]);
     } catch (error) {
       console.error("Error in handleSearch:", error);
@@ -43,7 +39,6 @@ const Main = () => {
       const pokex = await axios.get(region);
       setPokedex(pokex.data.results ? pokex.data.results : pokex.data.pokemon);
       setPokeNumber(0);
-      console.log("region", pokex);
     } catch (err) {
       console.error(err);
     }
@@ -54,14 +49,11 @@ const Main = () => {
       console.warn("Invalid pokemonID:", pokemonID);
       return;
     }
-    const url = `${getPokem}${pokemonID}`;
-    console.log("Pokemon API URL:", url);
     try {
       const pokeData = await axios.get(`${getPokem}${pokemonID}`);
       setPokemon(pokeData);
     } catch (err) {
       console.error("Error fetching Pokemon:", err);
-      console.error("Error response:", err.response);
     }
   };
 
@@ -69,27 +61,10 @@ const Main = () => {
     try {
       const pokem = await axios.get(`${getPokeSpecies}${pokemonID}`);
       setPokeSpecie(pokem);
-      const evolutionChainUrl = pokem.data.evolution_chain.url;
-      setEvolutionChainUrl(evolutionChainUrl);
+      /* const evolutionChainUrl = pokem.data.evolution_chain.url; */
+      setEvolutionChainUrl(pokem.data.evolution_chain.url);
     } catch (err) {
       console.error("Error fetching Pokemon species:", err);
-    }
-  };
-
-  const fetchDataForCurrentPokemon = async () => {
-    if (pokedex.length > 0) {
-      const pokUrls = pokedex[pokeNumber].url
-        ? pokedex[pokeNumber].url
-        : pokedex[pokeNumber].pokemon.url;
-      const PokeID = pokUrls.split("/")[6];
-      setPokeID(PokeID);
-      fetchPokemon(pokeID);
-      fetchPokemonSpecies(pokeID);
-      await getEvoChain(evolutionChainUrl);
-    } else {
-      fetchPokemon(pokeID);
-      fetchPokemonSpecies(pokeID);
-      await getEvoChain(evolutionChainUrl);
     }
   };
   const getEvoChain = async (url) => {
@@ -101,6 +76,20 @@ const Main = () => {
     } catch (err) {
       console.error(err);
     }
+  };
+  const fetchDataForCurrentPokemon = async () => {
+    if (pokedex.length > 0 || pokeID) {
+      const pokUrls =
+        pokedex[pokeNumber]?.url || pokedex[pokeNumber]?.pokemon?.url;
+      const PokeID = pokUrls?.split("/")[6];
+      setPokeID(PokeID);
+    }
+
+    await Promise.all([
+      fetchPokemon(pokeID),
+      fetchPokemonSpecies(pokeID),
+      getEvoChain(evolutionChainUrl),
+    ]);
   };
 
   useEffect(() => {
@@ -131,14 +120,11 @@ const Main = () => {
     <Pokedex bkImage={bkImage}>
       <NavBar handleRegion={handleRegion} />
       <PokedexMini>
-        {pokemon ? (
+        {pokemon && (
           <Left handleSearch={handleSearch} handleRegion={handleRegion} />
-        ) : (
-          ""
         )}
-
-        {pokemon ? <BorderTwo /> : ""}
-        {pokemon ? (
+        {pokemon && <BorderTwo />}
+        {pokemon && (
           <Central
             pokemon={pokemon}
             onPrev={handlePrev}
@@ -146,20 +132,14 @@ const Main = () => {
             regionLenght={regionLenght}
             pokeNumber={pokeNumber}
           />
-        ) : (
-          ""
         )}
-
-        {pokemon ? <Border /> : "" }
-
-        {pokemon ? (
+        {pokemon && <Border />}
+        {pokemon && (
           <Right
             pokemon={pokemon}
             pokeSpecie={pokeSpecie}
             evolutionChain={evolutionChain}
           />
-        ) : (
-          ""
         )}
       </PokedexMini>
     </Pokedex>
