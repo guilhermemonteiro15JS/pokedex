@@ -21,6 +21,8 @@ const Main = () => {
 
   const regionLenght = pokedex.length;
 
+  const showButtons= true;
+
   const handleRegion = (newRegion, bkImage) => {
     console.log("region", newRegion);
     setRegion(newRegion);
@@ -129,7 +131,7 @@ const Main = () => {
 
   return (
     <Pokedex bkImage={bkImage}>
-      <NavBar handleRegion={handleRegion} />
+      <NavBar handleRegion={handleRegion} showButtons={showButtons}/>
       <PokedexMini>
         {pokemon ? (
           <Left handleSearch={handleSearch} handleRegion={handleRegion} />
