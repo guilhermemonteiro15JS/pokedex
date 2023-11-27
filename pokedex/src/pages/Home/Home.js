@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
+import {Link } from "react-router-dom"
 import {
   PokedexFechada,
   Pokedex,
@@ -8,14 +8,14 @@ import {
   BrowserButton,
   Capa,
   CapaContainer, 
-  Image
+  Image, Button
 } from "./styled";
 
 const Home = () => {
   const showButtons = false;
 
   return (
-    <div>
+    <>
       <NavBar showButtons={showButtons} />
       <Pokedex>
         <PokedexFechada>
@@ -27,13 +27,15 @@ const Home = () => {
           <CapaContainer>
             <Link to="/main">
             <Capa>
-              <Image src="./pokebola.png" alt="Pokebola"/>
+              <Image >
+                <Button/>
+              </Image>
             </Capa>
             </Link>
           </CapaContainer>
         </PokedexFechada>
       </Pokedex>
-    </div>
+    </>
   );
 };
 
