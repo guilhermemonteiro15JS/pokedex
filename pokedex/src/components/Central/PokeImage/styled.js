@@ -24,4 +24,10 @@ border-left-width: 0px;
 border-right-width: 0px;
 left: 50px;
 overflow: hidden;
+
+
+@media (max-width: 768px) {
+    width: 220px;
+    height: 160px;
+  }
 `;

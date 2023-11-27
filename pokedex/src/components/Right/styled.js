@@ -9,4 +9,19 @@ display: flex;
 flex-direction: column;
 justify-content: space-around;
 align-items: center;
+
+@media (max-width: 768px) {
+
+}
+
 `;
+
+
+export const BtnDetails = styled.div`
+display:none;
+
+
+@media (max-width: 768px) {
+  display:inline;
+}
+`

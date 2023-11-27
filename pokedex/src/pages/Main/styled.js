@@ -5,6 +5,11 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin-top: 50px;
+
+@media (max-width: 768px) {
+    flex-direction:column;
+  }
+
 `;
 
 export const Border = styled.div`
@@ -14,6 +19,13 @@ position: relative;
 top: 13px;
 border-radius: 3px;
 background: #C1132A;
+
+@media (max-width: 768px) {
+    height: 10px;
+    width: 400px;
+    top: 0px;
+  }
+
 `;
 
 export const BorderTwo = styled.div`
@@ -23,6 +35,12 @@ position: relative;
 top: 13px;
 border-radius: 3px;
 background: #C1132A;
+
+@media (max-width: 768px) {
+    height: 10px;
+    width: 200px;
+    top: 0px;
+  }
 `;
 
 export const Pokedex = styled.div`
@@ -33,4 +51,10 @@ background-image:url(${props => props.bkImage});
 background-size: cover;
 background-repeat: no-repeat;
 height:100vh;
+
+@media (max-width: 768px) {
+    height:100%;
+  }
+
+
 `;
