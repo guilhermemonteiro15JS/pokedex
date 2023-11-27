@@ -1,10 +1,14 @@
-import React from 'react';
-import { PokeNameH2 } from './styled';
+import React from "react";
+import { PokeNameH2, PokeID } from "./styled";
 
-const PokeName = ({pokemon}) => {
+const PokeName = ({ pokemon }) => {
   return (
-    <PokeNameH2>{pokemon.data.name}</PokeNameH2>
-  )
-}
+    <PokeNameH2>
+      <PokeID>Nº: {pokemon.data.id} </PokeID> 
+      {pokemon.data.name}
+    </PokeNameH2>
+  );
+};
 
-export default PokeName
+export default PokeName;
+ 
