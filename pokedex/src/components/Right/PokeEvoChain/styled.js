@@ -9,8 +9,8 @@ export const PokeTypeH2 = styled.h2`
 
 export const InfoContainer = styled.div`
   display: flex;
-  width: 398px;
-  height: 176px;
+  width: 390px;
+  height: 150px;
   padding: 8px;
   justify-content: center;
   flex-direction: column;

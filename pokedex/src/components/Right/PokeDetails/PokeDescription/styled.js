@@ -1,6 +1,6 @@
 import { styled} from "styled-components";
 
-export const DescriptionH2 = styled.h2`
+export const DescriptionH2 = styled.h3`
 display: flex;
 align-items: center;
 justify-content: center;

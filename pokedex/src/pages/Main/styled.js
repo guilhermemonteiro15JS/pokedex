@@ -4,12 +4,12 @@ export const PokedexMini = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 10px;
+margin-top: 50px;
 `;
 
 export const Border = styled.div`
 width: 14px;
-height: 680px;
+height: 580px;
 position: relative;
 top: 13px;
 border-radius: 3px;

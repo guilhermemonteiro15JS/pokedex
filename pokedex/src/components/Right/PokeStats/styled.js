@@ -12,12 +12,12 @@ export const PokeStatsUl = styled.table`
 
 export const Status = styled.div`
 display: flex;
-width: 398px;
-height: 176px;
+width: 390px;
+height: 160px;
 padding: 8px;
 justify-content: space-between;
 flex-direction: column;
-gap: 5px;
+gap: 1px;
 border: none;
 border-radius: 4%;
 position: relative;

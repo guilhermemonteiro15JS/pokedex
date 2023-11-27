@@ -4,7 +4,7 @@ import { PokeNameH2, PokeID } from "./styled";
 const PokeName = ({ pokemon }) => {
   return (
     <PokeNameH2>
-      <PokeID>Nº: {pokemon.data.id} </PokeID> 
+      <PokeID>Nº {pokemon.data.id} </PokeID> 
       {pokemon.data.name}
     </PokeNameH2>
   );

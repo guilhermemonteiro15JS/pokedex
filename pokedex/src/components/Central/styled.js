@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CentralStyle = styled.div`
 width: 499px;
-height: 752px;
+height: 652px;
 border-radius: 15px;
 background: #D2162E;
 `;
@@ -40,7 +40,7 @@ cursor: pointer;
 export const NavigationButtonsContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 100px; 
+    margin-top: auto; 
 `;
 
 export const BtnOnNext = styled.button`

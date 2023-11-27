@@ -9,8 +9,8 @@ background-size: cover;
 `;
 
 export const ImgPokeDiv = styled.div`
-width: 405px;
-height: 400px;
+width: 400px;
+height: 350px;
 background: #D9D9D9;
 position: relative;
 display: flex;
