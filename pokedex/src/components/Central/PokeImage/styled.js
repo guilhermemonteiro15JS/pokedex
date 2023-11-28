@@ -25,8 +25,13 @@ border-right-width: 0px;
 left: 50px;
 overflow: hidden;
 
+@media (max-width: 1024px) {
+    width: 320px;
+    height: 280px;
+    left: 30px;
+  }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     width: 200px;
     height: 180px;
     left: 20px;

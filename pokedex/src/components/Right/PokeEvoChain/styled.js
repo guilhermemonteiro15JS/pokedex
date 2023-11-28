@@ -5,6 +5,15 @@ export const PokeTypeH2 = styled.h2`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1024px) {
+  font-size:15px;
+
+}
+@media (max-width: 768px) {
+  font-size:18px;
+
+}
 `;
 
 export const InfoContainer = styled.div`
@@ -19,6 +28,19 @@ export const InfoContainer = styled.div`
   border-radius: 4%;
   position: relative;
   background: #fc9e4f;
+
+
+@media (max-width: 1024px) {
+    width: 320px;
+height: 120px;
+  }
+
+  @media (max-width: 768px) {
+    width: 390px;
+height: 160px;
+font-size: 13px;
+  }
+
 `;
 
 export const EvolutionContainer = styled.div`
@@ -26,6 +48,11 @@ export const EvolutionContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   margin-top: 10px;
+
+  @media (max-width: 1024px) {
+    margin-top: 1px;
+
+}
 `;
 
 export const EvolutionImage = styled.img`

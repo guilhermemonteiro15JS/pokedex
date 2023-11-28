@@ -6,6 +6,15 @@ height: 10px;
 background-color: #eee;
 border-radius: 4px;
 overflow: hidden;
+@media (max-width: 1024px) {
+    width: 120px;
+height: 10px;
+  }
+
+@media (max-width: 768px) {
+  width: 200px;
+height: 10px;
+  }
 `;
 
 export const ProgressBarFill= styled.div`

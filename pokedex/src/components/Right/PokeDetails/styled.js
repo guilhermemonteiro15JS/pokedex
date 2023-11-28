@@ -13,4 +13,14 @@ border: none;
 border-radius: 4%;
 position: relative;
 background: #FC9E4F;
+
+@media (max-width: 1024px) {
+    width: 320px;
+height: 120px;
+  }
+  @media (max-width: 768px) {
+    width: 390px;
+height: 160px;
+  }
+
 `;

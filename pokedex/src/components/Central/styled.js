@@ -6,10 +6,16 @@ export const CentralStyle = styled.div`
   border-radius: 15px;
   background: #d2162e;
 
+  @media (max-width: 1024px) {
+    width: 380px;
+    height: 530px;
+  }
   @media (max-width: 768px) {
     width: 420px;
     height: 350px;
   }
+
+
 `;
 
 export const BrowserButtonsContainer = styled.div`
@@ -41,11 +47,17 @@ export const BrowserButton = styled.button`
   &:active {
     filter: brightness(0.8);
   }
+  @media (max-width: 1024px) {
+    width: 20px;
+    height: 20px;
+  }
 
   @media (max-width: 768px) {
     width: 15px;
     height: 15px;
   }
+
+ 
 `;
 
 export const ImgAndName = styled.div`

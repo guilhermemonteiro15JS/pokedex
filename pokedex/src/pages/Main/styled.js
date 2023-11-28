@@ -4,10 +4,11 @@ export const PokedexMini = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 50px;
+margin-top:50px;
 
 @media (max-width: 768px) {
     flex-direction:column;
+    margin-top:10px;
   }
 
 `;
@@ -19,6 +20,12 @@ position: relative;
 top: 13px;
 border-radius: 3px;
 background: #C1132A;
+
+@media (max-width: 1024px) {
+  width: 14px;
+height: 480px;
+    top: 0px;
+  }
 
 @media (max-width: 768px) {
     height: 10px;
@@ -35,6 +42,12 @@ position: relative;
 top: 13px;
 border-radius: 3px;
 background: #C1132A;
+
+@media (max-width: 1024px) {
+  width: 14px;
+height: 300px;
+    top: 0px;
+  }
 
 @media (max-width: 768px) {
     height: 10px;

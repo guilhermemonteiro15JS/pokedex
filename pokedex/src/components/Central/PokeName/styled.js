@@ -17,6 +17,15 @@ color: white;
 font-size: 30px;
 margin-bottom:60px;
 
+@media (max-width: 1024px) {
+width: 280px;
+height: 30px;
+padding: 10px;
+font-size: 25px;
+bottom: 110px;
+left: 40px;
+  }
+
 @media (max-width: 768px) {
 width: 150px;
 height: 30px;
@@ -25,6 +34,8 @@ font-size: 15px;
 bottom: 110px;
 left: 20px;
   }
+
+
 
 `;
 
