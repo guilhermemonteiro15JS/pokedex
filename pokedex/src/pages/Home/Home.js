@@ -8,7 +8,11 @@ import {
   BrowserButton,
   Capa,
   CapaContainer, 
-  Image, Button
+  Image, 
+  Button, 
+  TextCountainer, 
+  Title,
+  SubTitle,
 } from "./styled";
 
 const Home = () => {
@@ -17,6 +21,10 @@ const Home = () => {
   return (
     <>
       <NavBar showButtons={showButtons} />
+      <TextCountainer>
+      <Title> Aqui poderás ver todos os Pokemons das várias gerações. </Title>
+      <SubTitle> Clica no centro da Pokebola e revive memórias de infância.</SubTitle>
+      </TextCountainer>
       <Pokedex>
         <PokedexFechada>
           <BrowserButtonsContainer>

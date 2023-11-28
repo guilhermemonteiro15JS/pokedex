@@ -15,7 +15,7 @@ const Main = () => {
   const [pokeSpecie, setPokeSpecie] = useState(null);
   const [evolutionChainUrl, setEvolutionChainUrl] = useState(null);
   const [evolutionChain, setEvolutionChain] = useState([]);
-  const [region, setRegion] = useState(null);
+  const [region, setRegion] = useState("https://pokeapi.co/api/v2/pokemon/?limit=151");
   const [bkImage, setBkImage] = useState(null);
   const [pokeID, setPokeID] = useState(null);
 

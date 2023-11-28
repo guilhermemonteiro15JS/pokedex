@@ -11,7 +11,7 @@ export const Pokedex= styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-margin: 60px;
+margin-top: 20px;
 `;
 export const BrowserButtonsContainer = styled.div`
 display: flex;
@@ -57,6 +57,19 @@ align-items: center;
 justify-content: center;
 `;
 
+export const TextCountainer= styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+`;
+
+export const Title= styled.h1`
+margin: 5px;
+`;
+export const SubTitle= styled.h2`
+margin: 5px;
+`;
 export const CapaContainer = styled.div`
 display: flex;
  align-items: center;
@@ -69,7 +82,7 @@ width: 60px;
 height: 60px;
 background: #EB0909;
 border-radius: 50%;
-top: 395px;
+top: 442px;
 
 transition: filter 0.3s ease-in-out;
 
@@ -87,4 +100,10 @@ z-index:99;
 display: flex;
 align-items: center;
 justify-content: center;
+`;
+
+export const ImagePoke1 = styled.image`
+width: 400px;
+height: 250.841px;
+
 `;
