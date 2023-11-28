@@ -73,7 +73,7 @@ const NavBar = ({ handleRegion }) => {
   return (
     <NavBarStyle>
         <ImagemPoke src="/PokémonLogo.png" alt="Pokémon" />
-        <MenuButton onClick={toggleMenu} isOpen={menuOpen}>
+        <MenuButton onClick={toggleMenu} isOpen={menuOpen} className={menuOpen ? "open" : ""}>
           <div />
           <div />
           <div />

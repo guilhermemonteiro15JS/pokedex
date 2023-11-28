@@ -1,5 +1,4 @@
 import { styled } from "styled-components";
-import MenuImage from "../../assets/pokeball-icon.png";
 
 export const NavBarStyle = styled.div`
   display: flex;
@@ -31,6 +30,7 @@ export const MenuButton = styled.div`
     height: 20px;
     background-color: transparent;
     border: none;
+    transition: transform 0.3s;
 
     div {
       width: 100%;
@@ -88,7 +88,7 @@ export const ImagemPoke = styled.img`
   display: flex;
   justify-content: start;
   z-index: 2;
-  margin-left: 10px;
+
 `;
 export const DivButton = styled.div`
   display: flex;

@@ -22,7 +22,7 @@ background: #C1132A;
 
 @media (max-width: 768px) {
     height: 10px;
-    width: 400px;
+    width: 350px;
     top: 0px;
   }
 

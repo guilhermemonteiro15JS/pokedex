@@ -7,8 +7,8 @@ export const CentralStyle = styled.div`
   background: #d2162e;
 
   @media (max-width: 768px) {
-    width: 499px;
-    height: 352px;
+    width: 420px;
+    height: 350px;
   }
 `;
 
@@ -54,6 +54,7 @@ export const ImgAndName = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: row;
+    align-items:center;
     gap: 20px;
     margin-bottom: 50px;
   }
@@ -79,7 +80,7 @@ export const BtnOnNext = styled.button`
   }
 `;
 export const BtnOnPrev = styled.button`
-  width:110px;
+  width: 110px;
   height: 20px;
   background-image: url("/Buttontogoleft.png");
   background-repeat: no-repeat;

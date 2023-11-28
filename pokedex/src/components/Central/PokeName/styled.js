@@ -23,7 +23,7 @@ height: 30px;
 padding: 10px;
 font-size: 15px;
 bottom: 110px;
-
+left: 20px;
   }
 
 `;
@@ -40,6 +40,7 @@ justify-content:flex-start;
 @media (max-width: 768px) {
     font-size:10px;
 margin-right: 0px;
+width:70px;
 }
 
 `

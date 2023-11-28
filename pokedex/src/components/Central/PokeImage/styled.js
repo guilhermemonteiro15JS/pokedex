@@ -27,7 +27,8 @@ overflow: hidden;
 
 
 @media (max-width: 768px) {
-    width: 220px;
+    width: 200px;
     height: 180px;
+    left: 20px;
   }
 `;
