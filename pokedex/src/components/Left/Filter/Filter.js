@@ -20,6 +20,7 @@ import {
   ButtonRock,
   ButtonSteel,
   ButtonWater,
+  H2
 } from "./styled";
 
 const Filter = ({ handleRegion }) => {
@@ -31,7 +32,7 @@ const Filter = ({ handleRegion }) => {
 
   return (
     <CountainerDiv>
-      <h2>Filter:</h2>
+      <H2>Filter:</H2>
       <Row>
       <ButtonNormal onClick={() => handleType("normal")}></ButtonNormal>
       <ButtonFire onClick={() => handleType("fire")}></ButtonFire>

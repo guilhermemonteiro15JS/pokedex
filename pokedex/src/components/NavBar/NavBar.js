@@ -1,8 +1,20 @@
 import React, { useState } from "react";
-import { NavBarStyle, Button, ImagemPoke, DivButton } from "./styled";
+import {
+  NavBarStyle,
+  Button,
+  ImagemPoke,
+  DivButton,
+  MenuButton,
+
+} from "./styled";
 
 const NavBar = ({ handleRegion, showButtons }) => {
   const [selectedGen, setSelectedGen] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   const handleGen1 = () => {
     const gen1 = "https://pokeapi.co/api/v2/pokemon/?limit=151";
@@ -60,107 +72,95 @@ const NavBar = ({ handleRegion, showButtons }) => {
 
   return (
     <NavBarStyle>
-      <ImagemPoke src="/PokémonLogo.png" alt="Pokémon" />
-      <DivButton>
-        {showButtons && (
-        <Button
-          isSelected={
-            selectedGen === "https://pokeapi.co/api/v2/pokemon/?limit=151"
-          }
-          onClick={handleGen1}
-        >
-          Gen1
-        </Button>
-        )}
-        {showButtons && (
-        <Button
-          isSelected={
-            selectedGen ===
-            "https://pokeapi.co/api/v2/pokemon/?offset=151&limit=100"
-          }
-          onClick={handleGen2}
-        >
-          Gen2
-        </Button>
-        )}
-        {showButtons && (
-        <Button
-          isSelected={
-            selectedGen ===
-            "https://pokeapi.co/api/v2/pokemon/?offset=251&limit=135"
-          }
-          onClick={handleGen3}
-        >
-          Gen3
-        </Button>
-        )}
-        {showButtons && (
-        <Button
-          isSelected={
-            selectedGen ===
-            "https://pokeapi.co/api/v2/pokemon/?offset=386&limit=107"
-          }
-          onClick={handleGen4}
-        >
-          Gen4
-        </Button>
-        )}
-        {showButtons && (
-        <Button
-          isSelected={
-            selectedGen ===
-            "https://pokeapi.co/api/v2/pokemon/?offset=493&limit=156"
-          }
-          onClick={handleGen5}
-        >
-          Gen5
-        </Button>
-        )}
-        {showButtons && (
-        <Button
-          isSelected={
-            selectedGen ===
-            "https://pokeapi.co/api/v2/pokemon/?offset=649&limit=72"
-          }
-          onClick={handleGen6}
-        >
-          Gen6
-        </Button>
-        )}
-        {showButtons && (
-        <Button
-          isSelected={
-            selectedGen ===
-            "https://pokeapi.co/api/v2/pokemon/?offset=721&limit=88"
-          }
-          onClick={handleGen7}
-        >
-          Gen7
-        </Button>
-        )}
-        {showButtons && (
-        <Button
-          isSelected={
-            selectedGen ===
-            "https://pokeapi.co/api/v2/pokemon/?offset=809&limit=96"
-          }
-          onClick={handleGen8}
-        >
-          Gen8
-        </Button>
-        )}
-        {showButtons && (
-        <Button
-          isSelected={
-            selectedGen ===
-            "https://pokeapi.co/api/v2/pokemon/?offset=905&limit=103"
-          }
-          onClick={handleGen9}
-        >
-          Gen9
-        </Button>
-        )}
-      </DivButton>
+        <ImagemPoke src="/PokémonLogo.png" alt="Pokémon" />
+        <MenuButton onClick={toggleMenu} isOpen={menuOpen} className={menuOpen ? "open" : ""}>
+          <div />
+          <div />
+          <div />
+        </MenuButton>
+        <DivButton isOpen={menuOpen}>
+          <Button
+            isSelected={
+              selectedGen === "https://pokeapi.co/api/v2/pokemon/?limit=151"
+            }
+            onClick={handleGen1}
+          >
+            Gen1
+          </Button>
+          <Button
+            isSelected={
+              selectedGen ===
+              "https://pokeapi.co/api/v2/pokemon/?offset=151&limit=100"
+            }
+            onClick={handleGen2}
+          >
+            Gen2
+          </Button>
+          <Button
+            isSelected={
+              selectedGen ===
+              "https://pokeapi.co/api/v2/pokemon/?offset=251&limit=135"
+            }
+            onClick={handleGen3}
+          >
+            Gen3
+          </Button>
+          <Button
+            isSelected={
+              selectedGen ===
+              "https://pokeapi.co/api/v2/pokemon/?offset=386&limit=107"
+            }
+            onClick={handleGen4}
+          >
+            Gen4
+          </Button>
+          <Button
+            isSelected={
+              selectedGen ===
+              "https://pokeapi.co/api/v2/pokemon/?offset=493&limit=156"
+            }
+            onClick={handleGen5}
+          >
+            Gen5
+          </Button>
+          <Button
+            isSelected={
+              selectedGen ===
+              "https://pokeapi.co/api/v2/pokemon/?offset=649&limit=72"
+            }
+            onClick={handleGen6}
+          >
+            Gen6
+          </Button>
+          <Button
+            isSelected={
+              selectedGen ===
+              "https://pokeapi.co/api/v2/pokemon/?offset=721&limit=88"
+            }
+            onClick={handleGen7}
+          >
+            Gen7
+          </Button>
+          <Button
+            isSelected={
+              selectedGen ===
+              "https://pokeapi.co/api/v2/pokemon/?offset=809&limit=96"
+            }
+            onClick={handleGen8}
+          >
+            Gen8
+          </Button>
+          <Button
+            isSelected={
+              selectedGen ===
+              "https://pokeapi.co/api/v2/pokemon/?offset=905&limit=103"
+            }
+            onClick={handleGen9}
+          >
+            Gen9
+          </Button>
+        </DivButton>
+    
     </NavBarStyle>
   );
 };
