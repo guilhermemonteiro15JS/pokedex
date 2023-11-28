@@ -88,11 +88,11 @@ export const ImagemPoke = styled.img`
   display: flex;
   justify-content: start;
   z-index: 2;
-
 `;
 export const DivButton = styled.div`
   display: flex;
   gap: 10px;
+  margin-right: 180px;
 
   @media (max-width: 768px) {
     display: ${(props) => (props.isOpen ? "flex" : "none")};
@@ -110,5 +110,68 @@ export const DivButton = styled.div`
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+  }
+`;
+
+export const ButtonS = styled.button`
+display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 0 5px;
+  color: black;
+  text-shadow: 2px 2px rgb(116, 116, 116);
+  text-transform: uppercase;
+  border: solid 2px black;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 17px;
+  background-color: hsl(49deg 98% 60%);
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+
+  &:active {
+    transform: scale(0.9);
+    transition: all 100ms ease;
+  }
+
+  img {
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .imagem {
+    height: 40px;
+    width: 30px;
+    color: hsl(49deg 98% 60%);
+  }
+
+  .play {
+    transition: all 0.5s ease;
+    transition-delay: 300ms;
+  }
+
+  &:hover img {
+    transform: scale(3) translate(50%);
+  }
+
+  .now {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+
+  &:hover .now {
+    transform: translateX(10px);
+    transition-delay: 300ms;
+  }
+
+  &:hover .play {
+    transform: translateX(200%);
+    transition-delay: 300ms;
   }
 `;
