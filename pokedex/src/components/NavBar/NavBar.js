@@ -8,7 +8,7 @@ import {
 
 } from "./styled";
 
-const NavBar = ({ handleRegion }) => {
+const NavBar = ({ handleRegion, showButtons }) => {
   const [selectedGen, setSelectedGen] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
