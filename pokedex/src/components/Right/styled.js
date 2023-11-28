@@ -11,7 +11,8 @@ justify-content: space-around;
 align-items: center;
 
 @media (max-width: 768px) {
-
+  width: 499px;
+    height: 352px;
 }
 
 `;

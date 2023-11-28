@@ -28,6 +28,6 @@ overflow: hidden;
 
 @media (max-width: 768px) {
     width: 220px;
-    height: 160px;
+    height: 180px;
   }
 `;
