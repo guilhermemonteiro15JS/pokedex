@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavBarStyle, Button, ImagemPoke, DivButton } from "./styled";
 
-const NavBar = ({ handleRegion }) => {
+const NavBar = ({ handleRegion, showButtons }) => {
   const [selectedGen, setSelectedGen] = useState(null);
 
   const handleGen1 = () => {
@@ -62,6 +62,7 @@ const NavBar = ({ handleRegion }) => {
     <NavBarStyle>
       <ImagemPoke src="/PokémonLogo.png" alt="Pokémon" />
       <DivButton>
+        {showButtons && (
         <Button
           isSelected={
             selectedGen === "https://pokeapi.co/api/v2/pokemon/?limit=151"
@@ -70,6 +71,8 @@ const NavBar = ({ handleRegion }) => {
         >
           Gen1
         </Button>
+        )}
+        {showButtons && (
         <Button
           isSelected={
             selectedGen ===
@@ -79,6 +82,8 @@ const NavBar = ({ handleRegion }) => {
         >
           Gen2
         </Button>
+        )}
+        {showButtons && (
         <Button
           isSelected={
             selectedGen ===
@@ -88,6 +93,8 @@ const NavBar = ({ handleRegion }) => {
         >
           Gen3
         </Button>
+        )}
+        {showButtons && (
         <Button
           isSelected={
             selectedGen ===
@@ -97,6 +104,8 @@ const NavBar = ({ handleRegion }) => {
         >
           Gen4
         </Button>
+        )}
+        {showButtons && (
         <Button
           isSelected={
             selectedGen ===
@@ -106,6 +115,8 @@ const NavBar = ({ handleRegion }) => {
         >
           Gen5
         </Button>
+        )}
+        {showButtons && (
         <Button
           isSelected={
             selectedGen ===
@@ -115,6 +126,8 @@ const NavBar = ({ handleRegion }) => {
         >
           Gen6
         </Button>
+        )}
+        {showButtons && (
         <Button
           isSelected={
             selectedGen ===
@@ -124,6 +137,8 @@ const NavBar = ({ handleRegion }) => {
         >
           Gen7
         </Button>
+        )}
+        {showButtons && (
         <Button
           isSelected={
             selectedGen ===
@@ -133,6 +148,8 @@ const NavBar = ({ handleRegion }) => {
         >
           Gen8
         </Button>
+        )}
+        {showButtons && (
         <Button
           isSelected={
             selectedGen ===
@@ -142,6 +159,7 @@ const NavBar = ({ handleRegion }) => {
         >
           Gen9
         </Button>
+        )}
       </DivButton>
     </NavBarStyle>
   );
