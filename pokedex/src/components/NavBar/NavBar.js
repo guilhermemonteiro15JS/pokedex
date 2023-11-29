@@ -39,35 +39,42 @@ const NavBar = ({ handleRegion, showButtons }) => {
 
   const handleGen4 = () => {
     const gen4 = "https://pokeapi.co/api/v2/pokemon/?offset=386&limit=107";
+    const bkImage = "/Gen4_Map.png";
     setSelectedGen(gen4);
-    handleRegion(gen4);
+    handleRegion(gen4, bkImage);
   };
 
   const handleGen5 = () => {
     const gen5 = "https://pokeapi.co/api/v2/pokemon/?offset=493&limit=156";
+    const bkImage = "/Gen5_Map.png";
     setSelectedGen(gen5);
-    handleRegion(gen5);
+    handleRegion(gen5,bkImage);
   };
 
   const handleGen6 = () => {
     const gen6 = "https://pokeapi.co/api/v2/pokemon/?offset=649&limit=72";
+    const bkImage = "/Gen6_Map.png";
     setSelectedGen(gen6);
-    handleRegion(gen6);
+    handleRegion(gen6, bkImage);
   };
   const handleGen7 = () => {
     const gen7 = "https://pokeapi.co/api/v2/pokemon/?offset=721&limit=88";
-    handleRegion(gen7);
+    const bkImage = "/Gen7_Map.png";
+    setSelectedGen(gen7);
+    handleRegion(gen7,bkImage);
   };
   const handleGen8 = () => {
     const gen8 = "https://pokeapi.co/api/v2/pokemon/?offset=809&limit=96";
+    const bkImage = "/Gen8_Map.png";
     setSelectedGen(gen8);
-    handleRegion(gen8);
+    handleRegion(gen8, bkImage);
   };
 
   const handleGen9 = () => {
     const gen9 = "https://pokeapi.co/api/v2/pokemon/?offset=905&limit=103";
+    const bkImage = "/Gen9_Map.png";
     setSelectedGen(gen9);
-    handleRegion(gen9);
+    handleRegion(gen9, bkImage);
   };
 
   return (
