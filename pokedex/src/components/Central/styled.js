@@ -84,7 +84,7 @@ export const BtnOnNext = styled.button`
   height: 40px;
   background: #8b8b8b;
   border: 2px solid #000;
-  border-radius: 20px;  // Ajuste o raio da borda para torná-lo mais redondo
+  border-radius: 20px;
   cursor: pointer;
   margin-left: 100px;
   padding: 0 10px; 
@@ -105,7 +105,7 @@ export const BtnOnPrev = styled.button`
   height: 40px;
   background: #8b8b8b;
   border: 2px solid #000;
-  border-radius: 20px;  // Ajuste o raio da borda para torná-lo mais redondo
+  border-radius: 20px; 
   cursor: pointer;
   padding: 0 10px; 
 

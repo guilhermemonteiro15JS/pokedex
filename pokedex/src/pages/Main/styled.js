@@ -6,6 +6,7 @@ align-items: center;
 justify-content: center;
 margin-top:50px;
 
+
 @media (max-width: 768px) {
     flex-direction:column;
     margin-top:10px;
@@ -64,6 +65,7 @@ background-image:url(${props => props.bkImage});
 background-size: cover;
 background-repeat: no-repeat;
 height:100vh;
+max-width:100%;
 
 @media (max-width: 768px) {
     height:100%;

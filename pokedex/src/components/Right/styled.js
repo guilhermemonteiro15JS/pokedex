@@ -19,13 +19,48 @@ export const RightStyle = styled.div`
   @media (max-width: 768px) {
     width: 420px;
     height: 350px;
+    justify-content: flex-start;
   }
 `;
 
-export const BtnDetails = styled.div`
+export const BtnsContainer = styled.div`
   display: none;
+ 
 
   @media (max-width: 768px) {
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    
   }
 `;
+
+export const CommonBtnStyle = styled.div`
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:10px;
+  padding: 8px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #8b8b8b;
+  color: #fff;
+  border: 2px solid #000;
+  box-shadow: 0;
+
+  &:hover {
+    background: #a0a0a0;
+  }
+
+  &:active {
+    filter: brightness(0.8);
+  }
+`;
+
+export const BtnDetails = styled(CommonBtnStyle)``;
+export const BtnStats = styled(CommonBtnStyle)``;
+export const BtnEvo = styled(CommonBtnStyle)``;
