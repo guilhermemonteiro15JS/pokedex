@@ -1,18 +1,17 @@
 import React, { useState,useEffect } from "react";
 import { useMedia } from "react-use";
 import PokeStats from "./PokeStats/PokeStats";
-import { RightStyle,BtnDetails } from "./styled";
+import { RightStyle,BtnDetails,BtnsContainer,BtnEvo,BtnStats } from "./styled";
 import PokeDetails from "./PokeDetails/PokeDetails";
 import PokeEvoChain from "./PokeEvoChain/PokeEvoChain";
 
 const Right = ({ pokemon , pokeSpecie, evolutionChain}) => {
-  const isWideScreen = useMedia("(min-width: 768px)");
+  const isWideScreen = useMedia("(min-width: 875px)");
   const [showDetails, setShowDetails] = useState(isWideScreen);
   const [showStats, setShowStats] = useState(false);
   const [showEvoDetais, setShowEvoDetais] = useState(false);
 
   useEffect(() => {
-    // Atualiza os estados quando a largura da janela muda
     setShowDetails(isWideScreen);
     setShowStats(isWideScreen);
     setShowEvoDetais(isWideScreen);
@@ -26,14 +25,16 @@ const Right = ({ pokemon , pokeSpecie, evolutionChain}) => {
 
   return (
     <RightStyle>
-    <BtnDetails>
-      <button onClick={() => toggleVisibility("details")}>Details</button>
-      <button onClick={() => toggleVisibility("stats")}>Stats</button>
-      <button onClick={() => toggleVisibility("evoChain")}>EvoChain</button>
-    </BtnDetails>
+<BtnsContainer>
+      <BtnDetails onClick={() => toggleVisibility("details")}>Details</BtnDetails>
+  
+      <BtnStats onClick={() => toggleVisibility("stats")}>Stats</BtnStats>
+      <BtnEvo onClick={() => toggleVisibility("evoChain")}>EvoChain</BtnEvo>
+      </BtnsContainer>
     {showDetails ? <PokeDetails pokemon={pokemon} pokeSpecie={pokeSpecie} /> : null}
     {showStats ? <PokeStats pokemon={pokemon} /> : null}
     {showEvoDetais ? <PokeEvoChain evolutionChain={evolutionChain} /> : null}
+ 
   </RightStyle>
   );
 };

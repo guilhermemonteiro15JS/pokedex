@@ -4,15 +4,21 @@ export const CountainerDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items:center;
   gap: 4px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 875px) {
     flex-direction: row;
   }
 `;
 
 export const H2 = styled.h2`
-  @media (max-width: 768px) {
+
+@media (max-width: 1175px) {
+   font-size:18px;
+   margin:1px;
+  }
+  @media (max-width: 875px) {
     display: none;
   }
 `;
@@ -23,7 +29,11 @@ export const Row = styled.div`
   gap: 100px;
   border-bottom: 3px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+gap: 10px;
+  }
+
+  @media (max-width: 875px) {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
@@ -39,7 +49,15 @@ export const ButtonNormal = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px; 
     width: 25px;
@@ -55,7 +73,13 @@ export const ButtonBug = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;
@@ -71,7 +95,13 @@ export const ButtonDark = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;
@@ -87,7 +117,13 @@ export const ButtonDragon = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px; 
     width: 25px;
@@ -103,7 +139,13 @@ export const ButtonElectric = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;
@@ -119,7 +161,13 @@ export const ButtonFairy = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;
@@ -135,7 +183,13 @@ export const ButtonFire = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px; 
     width: 25px;
@@ -151,7 +205,13 @@ export const ButtonFighting = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;
@@ -167,7 +227,13 @@ export const ButtonFlying = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;
@@ -183,7 +249,13 @@ export const ButtonGhost = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;
@@ -199,7 +271,13 @@ export const ButtonGrass = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;
@@ -215,7 +293,13 @@ export const ButtonGround = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;
@@ -231,7 +315,13 @@ export const ButtonIce = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;
@@ -247,7 +337,13 @@ export const ButtonPoison = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;
@@ -263,7 +359,13 @@ export const ButtonPsychic = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;
@@ -279,7 +381,13 @@ export const ButtonRock = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;
@@ -296,7 +404,13 @@ export const ButtonSteel = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;
@@ -312,7 +426,13 @@ export const ButtonWater = styled.button`
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 1175px) {
+    flex: 1;
+    margin: 1px; 
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 875px) {
     flex: 1;
     margin: 4px;
     width: 25px;

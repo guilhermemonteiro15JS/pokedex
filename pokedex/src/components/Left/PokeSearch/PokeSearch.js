@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SearchDiv, Input } from "./styled";
+import { SearchDiv, Input, BtnSearch } from "./styled";
 
 const PokeSearch = ({handleSearch, pokemon}) => {
     const [searchText, setSearchText] = useState("")
@@ -34,9 +34,9 @@ const PokeSearch = ({handleSearch, pokemon}) => {
           value={pokemon}
           onChange={(e) => setSearchText(e.target.value)}
         />
-        <button type="button" onClick={handleClick}>
+        <BtnSearch type="button" onClick={handleClick}>
           Search
-        </button>
+        </BtnSearch>
       </form>
     </SearchDiv>
   );
