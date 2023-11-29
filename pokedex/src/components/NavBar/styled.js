@@ -119,7 +119,7 @@ display: flex;
   justify-content: flex-start;
   gap: 10px;
   padding: 0 5px;
-  color: black;
+  color: white;
   text-shadow: 2px 2px rgb(116, 116, 116);
   text-transform: uppercase;
   border: solid 2px black;
@@ -145,7 +145,8 @@ display: flex;
   .imagem {
     height: 40px;
     width: 30px;
-    color: hsl(49deg 98% 60%);
+    background-color: hsl(49deg 98% 60%);
+
   }
 
   .play {

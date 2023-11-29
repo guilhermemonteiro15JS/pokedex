@@ -91,7 +91,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="https://i.pinimg.com/originals/b7/e1/8c/b7e18c4d7e8b6b6a90b3603fd6c14bec.jpg"
+            src="../PokeButton/bulbasaur.png"
           />
          <span className="now">Gen 1</span>
 
@@ -107,7 +107,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
            <img
             class="imagem"
-            src="https://i.pinimg.com/originals/b7/e1/8c/b7e18c4d7e8b6b6a90b3603fd6c14bec.jpg"
+            src="./PokeButton/chikorita.png"
           />
          <span className="now">Gen 2</span>
           Gen2
@@ -122,7 +122,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="https://i.pinimg.com/originals/b7/e1/8c/b7e18c4d7e8b6b6a90b3603fd6c14bec.jpg"
+            src="./PokeButton/treecko.png"
           />
          <span className="now">Gen 3</span>
           Gen3
@@ -138,7 +138,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="https://i.pinimg.com/originals/b7/e1/8c/b7e18c4d7e8b6b6a90b3603fd6c14bec.jpg"
+            src="./PokeButton/turtwig.png"
           />
          <span className="now">Gen 4</span>
           Gen4
@@ -153,7 +153,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="https://i.pinimg.com/originals/b7/e1/8c/b7e18c4d7e8b6b6a90b3603fd6c14bec.jpg"
+            src="./PokeButton/victini.png"
           />
          <span className="now">Gen 5</span>
           Gen5
@@ -168,7 +168,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="https://i.pinimg.com/originals/b7/e1/8c/b7e18c4d7e8b6b6a90b3603fd6c14bec.jpg"
+            src="./PokeButton/chespin.png"
           />
          <span className="now">Gen 6</span>
           Gen6
@@ -183,7 +183,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="https://i.pinimg.com/originals/b7/e1/8c/b7e18c4d7e8b6b6a90b3603fd6c14bec.jpg"
+            src="./PokeButton/rowlet.png"
           />
          <span className="now">Gen 7</span>
           Gen7
@@ -198,7 +198,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="https://i.pinimg.com/originals/b7/e1/8c/b7e18c4d7e8b6b6a90b3603fd6c14bec.jpg"
+            src="./PokeButton/grookey.png"
           />
          <span className="now">Gen 8</span>
           Gen8
@@ -213,7 +213,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="https://i.pinimg.com/originals/b7/e1/8c/b7e18c4d7e8b6b6a90b3603fd6c14bec.jpg"
+            src="./PokeButton/sprigatito.png"
           />
          <span className="now">Gen 9</span>
           Gen9
