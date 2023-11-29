@@ -6,12 +6,12 @@ height: 10px;
 background-color: #eee;
 border-radius: 4px;
 overflow: hidden;
-@media (max-width: 1024px) {
+@media (max-width: 1175px) {
     width: 120px;
 height: 10px;
   }
 
-@media (max-width: 768px) {
+@media (max-width: 875px) {
   width: 200px;
 height: 10px;
   }

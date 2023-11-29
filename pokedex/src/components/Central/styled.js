@@ -7,12 +7,13 @@ export const CentralStyle = styled.div`
   border-radius: 15px;
   background: #ee0007;
 
-  @media (max-width: 1024px) {
+
+  @media (max-width: 1175px) {
     width: 380px;
     height: 530px;
   }
-  @media (max-width: 768px) {
-    width: 420px;
+  @media (max-width: 875px) {
+    width: 380px;
     height: 350px;
   }
 
@@ -48,12 +49,12 @@ export const BrowserButton = styled.button`
   &:active {
     filter: brightness(0.8);
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 1175px) {
     width: 20px;
     height: 20px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 875px) {
     width: 15px;
     height: 15px;
   }
@@ -64,11 +65,11 @@ export const BrowserButton = styled.button`
 export const ImgAndName = styled.div`
   display: flex;
   flex-direction: column;
-  @media (max-width: 768px) {
+  @media (max-width: 875px) {
     display: flex;
     flex-direction: row;
     align-items:center;
-    gap: 20px;
+    gap: 10px;
     margin-bottom: 50px;
   }
 `;

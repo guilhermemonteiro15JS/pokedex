@@ -6,7 +6,7 @@ import PokeDetails from "./PokeDetails/PokeDetails";
 import PokeEvoChain from "./PokeEvoChain/PokeEvoChain";
 
 const Right = ({ pokemon , pokeSpecie, evolutionChain}) => {
-  const isWideScreen = useMedia("(min-width: 769px)");
+  const isWideScreen = useMedia("(min-width: 875px)");
   const [showDetails, setShowDetails] = useState(isWideScreen);
   const [showStats, setShowStats] = useState(false);
   const [showEvoDetais, setShowEvoDetais] = useState(false);

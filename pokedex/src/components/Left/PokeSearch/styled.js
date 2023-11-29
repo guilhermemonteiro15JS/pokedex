@@ -6,9 +6,16 @@ export const SearchDiv = styled.div`
   flex-direction: row;
   align-items: center;  
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1175px) {
     align-items: center; 
     flex-direction: column;
+  }
+
+
+  @media (max-width: 875px) {
+    display: flex;
+  flex-direction: row;
+  align-items: center;  
   }
 `;
 
@@ -17,15 +24,16 @@ export const Input = styled.input`
   border: 2px solid #000;
   border-radius: 5px;
   padding: 8px;
+  margin: 10px 10px 1px 10px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1175px) {
     width: 90px;
     height: 8px;
     margin: 10px 10px 1px 10px;
     font-size: 11px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 875px) {
     width: 120px;
     height: 8px;
     margin: 5px;
@@ -40,7 +48,7 @@ width: 80px;
   justify-content: center;
   align-self: center;
   margin-top: 5px;
-  margin-left: 40px;
+  margin-left: 50px;
   padding: 8px;
   border: none;
   border-radius: 30px;
@@ -57,13 +65,13 @@ width: 80px;
     filter: brightness(0.8);
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1175px) {
     align-self: center;
     margin: 5px 0px 0px 35px;
     width: 60px; 
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 875px) {
     margin-top: 1px;
     font-size: 12px;
     align-self: center;

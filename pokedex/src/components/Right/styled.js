@@ -11,13 +11,13 @@ export const RightStyle = styled.div`
   justify-content: space-around;
   align-items: center;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1175px) {
     width: 380px;
     height: 530px;
   }
 
-  @media (max-width: 768px) {
-    width: 420px;
+  @media (max-width: 875px) {
+    width: 380px;
     height: 350px;
     justify-content: flex-start;
   }
@@ -27,7 +27,7 @@ export const BtnsContainer = styled.div`
   display: none;
  
 
-  @media (max-width: 768px) {
+  @media (max-width: 875px) {
     display: flex;
     flex-direction: row;
     align-items: center;

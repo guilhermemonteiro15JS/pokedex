@@ -20,7 +20,7 @@ color: black;
 font-size: 30px;
 margin-bottom:60px;
 
-@media (max-width: 1024px) {
+@media (max-width: 1175px) {
 width: 280px;
 height: 30px;
 padding: 10px;
@@ -29,13 +29,13 @@ bottom: 110px;
 left: 40px;
   }
 
-@media (max-width: 768px) {
+@media (max-width: 875px) {
 width: 150px;
 height: 30px;
 padding: 10px;
 font-size: 15px;
 bottom: 110px;
-left: 1px;
+left: 0px;
   }
 
 
@@ -55,7 +55,7 @@ justify-content:flex-start;
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 875px) {
     font-size:10px;
 margin-right: 0px;
 width:70px;

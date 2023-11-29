@@ -7,10 +7,10 @@ display: flex;
 align-items: center;
 justify-content: center;
 
-@media (max-width: 1024px) {
+@media (max-width: 1175px) {
     font-size:15px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 875px) {
     font-size:20px;
   }
 
@@ -24,11 +24,11 @@ flex-direction: row;
 gap: 20px;
 align-items:flex-start;
 padding:0px;
-@media (max-width: 1024px) {
+@media (max-width: 1175px) {
     font-size:15px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 875px) {
     font-size:14px;
   }
 `;

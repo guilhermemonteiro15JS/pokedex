@@ -6,7 +6,7 @@ export const PokeTypeH2 = styled.h2`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1175px) {
   font-size:15px;
 
 }
@@ -32,13 +32,13 @@ export const InfoContainer = styled.div`
 box-shadow: inset 6px 6px rgba(0,0,0,0.2);
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1175px) {
     width: 320px;
 height: 120px;
   }
 
-  @media (max-width: 768px) {
-    width: 390px;
+  @media (max-width: 875px) {
+    width: 340px;
 height: 160px;
 font-size: 13px;
   }
@@ -51,7 +51,7 @@ export const EvolutionContainer = styled.div`
   align-items: center;
   margin-top: 10px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1175px) {
     margin-top: 1px;
 
 }
