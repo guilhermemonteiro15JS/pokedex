@@ -12,8 +12,11 @@ position: relative;
 left: 60px;
  top: 15px;
 bottom: 191px;
-background: rgba(12, 71, 103, 0.76);
-color: white;
+background-color:#C2E688;
+border: 6px solid #522438;
+box-shadow: inset 6px 6px rgba(0,0,0,0.2);
+overflow: hidden;
+color: black;
 font-size: 30px;
 margin-bottom:60px;
 
@@ -32,12 +35,16 @@ height: 30px;
 padding: 10px;
 font-size: 15px;
 bottom: 110px;
-left: 20px;
+left: 1px;
   }
 
 
 
 `;
+
+export const Glass = styled.div`
+
+`
 
 export const PokeID = styled.h3 `
 font-size:15px;

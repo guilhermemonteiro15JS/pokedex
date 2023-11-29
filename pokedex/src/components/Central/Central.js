@@ -9,6 +9,8 @@ import {
   BtnOnNext,
   BtnOnPrev,
   ImgAndName,
+  ArrowLeftIcon,
+  ArrowRightIcon
 } from "./styled";
 
 const Central = ({ pokemon, onPrev, onNext, regionLenght, pokeNumber }) => {
@@ -28,8 +30,8 @@ const Central = ({ pokemon, onPrev, onNext, regionLenght, pokeNumber }) => {
       <PokeName pokemon={pokemon} />
       </ImgAndName>
       <NavigationButtonsContainer>
-        <BtnOnPrev onClick={onPrev} disabled={!prevPokemon}></BtnOnPrev>
-        <BtnOnNext onClick={onNext} disabled={!nextPokemon}></BtnOnNext>
+        <BtnOnPrev onClick={onPrev} disabled={!prevPokemon}><ArrowLeftIcon></ArrowLeftIcon></BtnOnPrev>
+        <BtnOnNext onClick={onNext} disabled={!nextPokemon}><ArrowRightIcon></ArrowRightIcon></BtnOnNext>
       </NavigationButtonsContainer>
     </CentralStyle>
   );

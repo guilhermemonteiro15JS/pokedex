@@ -4,7 +4,8 @@ export const RightStyle = styled.div`
   width: 499px;
   height: 652px;
   border-radius: 15px;
-  background: #d2162e;
+  /* background: #d2162e; */
+  background: #ee0007;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

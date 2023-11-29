@@ -7,6 +7,7 @@ justify-content: center;
 margin: 0px;
 font-size:20px;
 
+
 @media (max-width: 1024px) {
     font-size:15px;
   }
@@ -32,4 +33,5 @@ margin: 0px;
 
 export const PokeDescriptionDiv = styled.div`
 overflow: hidden;
+
 `;

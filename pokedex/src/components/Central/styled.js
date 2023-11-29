@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 export const CentralStyle = styled.div`
   width: 499px;
   height: 652px;
   border-radius: 15px;
-  background: #d2162e;
+  background: #ee0007;
 
   @media (max-width: 1024px) {
     width: 380px;
@@ -80,27 +81,51 @@ export const NavigationButtonsContainer = styled.div`
 
 export const BtnOnNext = styled.button`
   width: 110px;
-  height: 20px;
-  background: url("/Buttontogoright.png");
-  border: none;
-  border-radius: 60%;
+  height: 40px;
+  background: #8b8b8b;
+  border: 2px solid #000;
+  border-radius: 20px;  // Ajuste o raio da borda para torná-lo mais redondo
   cursor: pointer;
   margin-left: 100px;
+  padding: 0 10px; 
 
   &:hover {
-    filter: brightness(1.2);
+    background: #a0a0a0;
   }
+
+  &:active {
+    filter: brightness(0.8);
+  }
+
+  
+
 `;
 export const BtnOnPrev = styled.button`
-  width: 110px;
-  height: 20px;
-  background-image: url("/Buttontogoleft.png");
-  background-repeat: no-repeat;
-  border: none;
-  border-radius: 60%;
+ width: 110px;
+  height: 40px;
+  background: #8b8b8b;
+  border: 2px solid #000;
+  border-radius: 20px;  // Ajuste o raio da borda para torná-lo mais redondo
   cursor: pointer;
+  padding: 0 10px; 
 
   &:hover {
-    filter: brightness(1.2);
+    background: #a0a0a0;
   }
+
+  &:active {
+    filter: brightness(0.8);
+  }
+`;
+
+export const ArrowRightIcon = styled(BsArrowRight)`
+  color: #fff;
+  font-size: 30px; 
+  font-weight:bold;
+`;
+
+export const ArrowLeftIcon = styled(BsArrowLeft)`
+  color: #fff; 
+  font-size: 30px; 
+  font-weight:bold;
 `;

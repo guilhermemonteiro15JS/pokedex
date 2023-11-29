@@ -24,6 +24,8 @@ border-left-width: 0px;
 border-right-width: 0px;
 left: 50px;
 overflow: hidden;
+border: 6px solid #522438;
+box-shadow: inset 6px 6px rgba(0,0,0,0.2);
 
 @media (max-width: 1024px) {
     width: 320px;
@@ -34,6 +36,6 @@ overflow: hidden;
   @media (max-width: 768px) {
     width: 200px;
     height: 180px;
-    left: 20px;
+    left: 10px;
   }
 `;

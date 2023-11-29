@@ -27,7 +27,9 @@ export const InfoContainer = styled.div`
   border: none;
   border-radius: 4%;
   position: relative;
-  background: #fc9e4f;
+  background: #c5d6ab;
+  border: 6px solid #522438;
+box-shadow: inset 6px 6px rgba(0,0,0,0.2);
 
 
 @media (max-width: 1024px) {

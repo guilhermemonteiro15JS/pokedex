@@ -4,7 +4,8 @@ export const LefttStyle = styled.div`
 width: 250px;
 height: 550px;
 border-radius: 15px;
-background: #D2162E;
+ /* background: #d2162e; */
+ background: #ee0007;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
