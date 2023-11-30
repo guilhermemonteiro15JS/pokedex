@@ -98,7 +98,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="../PokeButton/bulbasaur.png"
+            src="../PokeButton/bulbasaur.png" alt=""
           />
          <span className="now">Gen 1</span>
 
@@ -114,7 +114,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
            <img
             class="imagem"
-            src="./PokeButton/chikorita.png"
+            src="./PokeButton/chikorita.png" alt=""
           />
          <span className="now">Gen 2</span>
           Gen2
@@ -129,7 +129,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="./PokeButton/treecko.png"
+            src="./PokeButton/treecko.png" alt=""
           />
          <span className="now">Gen 3</span>
           Gen3
@@ -145,7 +145,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="./PokeButton/turtwig.png"
+            src="./PokeButton/turtwig.png" alt=""
           />
          <span className="now">Gen 4</span>
           Gen4
@@ -160,7 +160,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="./PokeButton/victini.png"
+            src="./PokeButton/victini.png" alt=""
           />
          <span className="now">Gen 5</span>
           Gen5
@@ -175,7 +175,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="./PokeButton/chespin.png"
+            src="./PokeButton/chespin.png" alt=""
           />
          <span className="now">Gen 6</span>
           Gen6
@@ -190,7 +190,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="./PokeButton/rowlet.png"
+            src="./PokeButton/rowlet.png" alt=""
           />
          <span className="now">Gen 7</span>
           Gen7
@@ -205,7 +205,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="./PokeButton/grookey.png"
+            src="./PokeButton/grookey.png" alt=""
           />
          <span className="now">Gen 8</span>
           Gen8
@@ -220,7 +220,7 @@ const NavBar = ({ handleRegion, showButtons }) => {
         >
           <img
             class="imagem"
-            src="./PokeButton/sprigatito.png"
+            src="./PokeButton/sprigatito.png" alt=""
           />
          <span className="now">Gen 9</span>
           Gen9

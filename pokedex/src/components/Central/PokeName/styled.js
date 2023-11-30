@@ -17,20 +17,21 @@ border: 6px solid #522438;
 box-shadow: inset 6px 6px rgba(0,0,0,0.2);
 overflow: hidden;
 color: black;
-font-size: 30px;
+font-size: 25px;
 margin-bottom:60px;
+text-transform:uppercase;
 
 @media (max-width: 1175px) {
 width: 280px;
 height: 30px;
 padding: 10px;
-font-size: 25px;
+font-size: 20px;
 bottom: 110px;
 left: 40px;
   }
 
 @media (max-width: 875px) {
-width: 150px;
+width: 140px;
 height: 30px;
 padding: 10px;
 font-size: 15px;

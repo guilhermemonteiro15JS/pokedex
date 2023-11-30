@@ -10,6 +10,7 @@ export const RightStyle = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.5);
 
   @media (max-width: 1175px) {
     width: 380px;

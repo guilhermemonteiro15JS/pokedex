@@ -65,8 +65,11 @@ align-items: center;
 background-image:url(${props => props.bkImage});
 background-size: cover;
 background-repeat: no-repeat;
-height:100vh;
+height: 100%;
+  width: 100%;
 max-width:100%;
+min-height: 100vh;
+overflow: hidden;
 @media (max-width: 875px) {
     height:100%;
   }

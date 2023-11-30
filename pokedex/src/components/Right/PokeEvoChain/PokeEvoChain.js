@@ -5,23 +5,20 @@ const PokeEvoChain = ({ evolutionChain}) => {
 
     const renderEvolutions = () => {
         if (!evolutionChain) {
-          return <p>Não há informações de evolução disponíveis.</p>;
+          return
         }
     
         const evolutions = [];
         let currentPokemon = evolutionChain;
 
         if (!evolutionChain || Object.keys(evolutionChain).length === 0) {
-            console.log("Cadeia de evolução vazia ou inválida.");
             return;
           }
     
         while (currentPokemon) {
-            console.log("currentPokemon:", currentPokemon);
           const { species, evolves_to } = currentPokemon;
           const pokemonName = species.name;
           const pokeID= species.url.split("/")[6]
-          console.log("Poke url:", pokeID);
           
           const pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeID}.png`;
           evolutions.push(
