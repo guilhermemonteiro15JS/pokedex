@@ -9,6 +9,7 @@ justify-content: center;
 
 @media (max-width: 1175px) {
     font-size:15px;
+    margin-bottom: 0%;
   }
   @media (max-width: 875px) {
     font-size:20px;
@@ -25,7 +26,8 @@ gap: 20px;
 align-items:flex-start;
 padding:0px;
 @media (max-width: 1175px) {
-    font-size:15px;
+    font-size:12px;
+    margin-bottom: 1px;
   }
 
   @media (max-width: 875px) {

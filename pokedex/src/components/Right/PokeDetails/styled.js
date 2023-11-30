@@ -19,6 +19,7 @@ box-shadow: inset 6px 6px rgba(0,0,0,0.2);
 @media (max-width: 1175px) {
     width: 320px;
 height: 120px;
+padding-bottom:1px;
   }
   @media (max-width: 875px) {
     width: 340px;

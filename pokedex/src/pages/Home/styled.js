@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 
-
 export const HomeD = styled.div`
 background-image:url('Home_bk.png');
 display: flex;
@@ -90,9 +89,11 @@ flex-direction: column;
 
 export const Title= styled.h1`
 margin: 5px;
+color:white;
 `;
 export const SubTitle= styled.h2`
 margin: 5px;
+color:white;
 `;
 export const CapaContainer = styled.div`
 display: flex;

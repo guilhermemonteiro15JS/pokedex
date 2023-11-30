@@ -32,7 +32,7 @@ const Filter = ({ handleRegion }) => {
 
   return (
     <CountainerDiv>
-      <H2>Filter:</H2>
+      {/* <H2>Filter:</H2> */}
       <Row>
       <ButtonNormal onClick={() => handleType("normal")}></ButtonNormal>
       <ButtonFire onClick={() => handleType("fire")}></ButtonFire>
