@@ -34,8 +34,8 @@ box-shadow: inset 6px 6px rgba(0,0,0,0.2);
   }
 
   @media (max-width: 875px) {
-    width: 200px;
-    height: 180px;
+    width: 180px;
+    height: 160px;
     left: 5px;
   }
 `;

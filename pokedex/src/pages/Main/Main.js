@@ -96,10 +96,11 @@ const Main = () => {
 
   useEffect(() => {
     fetchPokedex();
-  }, [region]);
+  }, [region] );
 
   useEffect(() => {
-    fetchDataForCurrentPokemon();
+    fetchDataForCurrentPokemon(); 
+
   }, [pokedex, pokeNumber, pokeID]);
 
   useEffect(() => {

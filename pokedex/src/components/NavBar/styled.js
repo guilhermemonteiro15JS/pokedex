@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const NavBarStyle = styled.div`
   display: flex;
-  /* background-color: #4d9de0; */
+  background-color: rgba(135, 206, 250, 0.7);
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -11,7 +11,7 @@ export const NavBarStyle = styled.div`
   border-top-right-radius: 10px;
   overflow: hidden;
 
-  @media (max-width: 768px) {
+  @media (max-width: 875px) {
     padding: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -22,7 +22,7 @@ export const MenuButton = styled.div`
   display: none;
   cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (max-width: 875px) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -31,11 +31,13 @@ export const MenuButton = styled.div`
     background-color: transparent;
     border: none;
     transition: transform 0.3s;
+    margin-right:10px;
 
     div {
       width: 100%;
       height: 4px;
       background-color: #fff;
+      font-weight: bold;
       transition: background-color 0.3s;
     }
 
@@ -92,14 +94,18 @@ export const ImagemPoke = styled.img`
 export const DivButton = styled.div`
   display: flex;
   gap: 10px;
-  margin-right: 180px;
+ /*  margin-right: 180px; */
 
-  @media (max-width: 768px) {
+ @media (max-width: 920px) {
+   gap:1px;
+ }
+
+  @media (max-width: 875px) {
     display: ${(props) => (props.isOpen ? "flex" : "none")};
     flex-direction: column;
     text-align: center;
     align-items: center;
-    background-color: #4d9de0;
+    background-color: rgba(135, 206, 250, 0.7);
     padding: 5px;
     position: absolute;
     top: 60px;
@@ -110,6 +116,7 @@ export const DivButton = styled.div`
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    gap:10px;
   }
 `;
 
@@ -175,4 +182,16 @@ display: flex;
     transform: translateX(200%);
     transition-delay: 300ms;
   }
+  @media (max-width: 1130px) {
+    gap:1px;
+    font-size: 15px;
+
+    .imagem {
+    height: 30px;
+    width: 20px;
+    background-color: hsl(49deg 98% 60%);
+
+  }
+  }
+
 `;
