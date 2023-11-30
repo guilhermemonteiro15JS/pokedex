@@ -6,6 +6,7 @@ export const CentralStyle = styled.div`
   height: 652px;
   border-radius: 15px;
   background: #ee0007;
+  box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.5);
 
 
   @media (max-width: 1175px) {
