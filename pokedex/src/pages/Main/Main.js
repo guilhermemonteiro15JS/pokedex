@@ -4,7 +4,7 @@ import { getPokem, getPokeSpecies } from "../../api";
 import axios from "axios";
 import Central from "../../components/Central/Central";
 import Right from "../../components/Right/Right";
-import { Pokedex, Border, BorderTwo, PokedexMini } from "./styled";
+import { Pokedex, Border, BorderTwo, PokedexMini,LoadingImg } from "./styled";
 import NavBar from "../../components/NavBar/NavBar";
 import Left from "../../components/Left/Left";
 
@@ -18,6 +18,7 @@ const Main = () => {
   const [region, setRegion] = useState("https://pokeapi.co/api/v2/pokemon/?limit=151");
   const [bkImage, setBkImage] = useState("/Gen1_Map.png");
   const [pokeID, setPokeID] = useState(null);
+  const [loading, setLoading] = useState(true);
   const regionLenght = pokedex.length;
 
   const showButtons= true;
@@ -57,9 +58,11 @@ const Main = () => {
 
   const fetchPokedex = async (teste) => {
     try {
+      
       const pokex = await axios.get(teste);
       setPokedex(pokex.data.results ? pokex.data.results : pokex.data.pokemon);
       setPokeNumber(0);
+
     } catch (err) {
       console.error(err);
     }
@@ -100,6 +103,7 @@ const Main = () => {
   };
   const fetchDataForCurrentPokemon = async () => {
     if (pokedex.length > 0 || pokeID) {
+      setLoading(false);
       const pokUrls =
         pokedex[pokeNumber]?.url || pokedex[pokeNumber]?.pokemon?.url;
       const PokeID = pokUrls?.split("/")[6];
@@ -111,6 +115,12 @@ const Main = () => {
       fetchPokemonSpecies(pokeID),
       getEvoChain(evolutionChainUrl),
     ]);
+
+    if (!pokemon && !bkImage && !pokeSpecie && !evolutionChainUrl) {
+      setLoading(true);
+    } else if(pokemon && bkImage){
+      setLoading(false);
+    } 
   };
 
 
@@ -129,11 +139,12 @@ const Main = () => {
     <Pokedex bkImage={bkImage}>
       <NavBar handleRegion={handleRegion} showButtons={showButtons}/>
       <PokedexMini>
-        {pokemon && (
+      {loading && <LoadingImg src="Loading.gif" alt="Loading" />}
+        {!loading && pokemon && (
           <Left handleSearch={handleSearch} handleRegion={handleRegion} />
         )}
-        {pokemon && <BorderTwo />}
-        {pokemon && (
+        {!loading && pokemon && <BorderTwo />}
+        {!loading && pokemon && (
           <Central
             pokemon={pokemon}
             onPrev={handlePrev}
@@ -142,8 +153,8 @@ const Main = () => {
             pokeNumber={pokeNumber}
           />
         )}
-        {pokemon && <Border />}
-        {pokemon && (
+        {!loading && pokemon && <Border />}
+        {!loading && pokemon && (
           <Right
             pokemon={pokemon}
             pokeSpecie={pokeSpecie}
