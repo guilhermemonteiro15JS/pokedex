@@ -76,3 +76,8 @@ overflow: hidden;
 
 
 `;
+
+export const LoadingImg= styled.img`
+height: 300px;
+width: 300px;
+`;

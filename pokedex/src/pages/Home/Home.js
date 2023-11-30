@@ -13,14 +13,15 @@ import {
   TextCountainer, 
   Title,
   SubTitle,
+  HomeD
 } from "./styled";
 
 const Home = () => {
   const showButtons = false;
 
   return (
-    <>
-      <NavBar showButtons={showButtons} />
+    <HomeD>
+      {/* <NavBar showButtons={showButtons} /> */}
       <TextCountainer>
       <Title> Aqui poderás ver todos os Pokemons das várias gerações. </Title>
       <SubTitle> Clica no centro da Pokebola e revive memórias de infância.</SubTitle>
@@ -43,7 +44,7 @@ const Home = () => {
           </CapaContainer>
         </PokedexFechada>
       </Pokedex>
-    </>
+    </HomeD>
   );
 };
 
