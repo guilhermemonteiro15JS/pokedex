@@ -22,6 +22,25 @@ const Main = () => {
 
   const showButtons= true;
 
+
+  useEffect(() => {
+    fetchPokedex(region);
+  }, [region] );
+
+  useEffect(() => {
+    fetchDataForCurrentPokemon(); 
+
+  }, [pokedex, pokeNumber, pokeID]);
+
+  useEffect(() => {
+    if (evolutionChainUrl) {
+      getEvoChain(evolutionChainUrl);
+    }
+  }, [evolutionChainUrl]);
+
+
+
+
   const handleRegion = (newRegion, bkImage) => {
     setRegion(newRegion);
     setBkImage(bkImage);
@@ -36,9 +55,9 @@ const Main = () => {
     }
   };
 
-  const fetchPokedex = async () => {
+  const fetchPokedex = async (teste) => {
     try {
-      const pokex = await axios.get(region);
+      const pokex = await axios.get(teste);
       setPokedex(pokex.data.results ? pokex.data.results : pokex.data.pokemon);
       setPokeNumber(0);
     } catch (err) {
@@ -94,21 +113,8 @@ const Main = () => {
     ]);
   };
 
-  useEffect(() => {
-    fetchPokedex();
-  }, [region] );
 
-  useEffect(() => {
-    fetchDataForCurrentPokemon(); 
-
-  }, [pokedex, pokeNumber, pokeID]);
-
-  useEffect(() => {
-    if (evolutionChainUrl) {
-      getEvoChain(evolutionChainUrl);
-    }
-  }, [evolutionChainUrl]);
-
+ 
   const handlePrev = (e) => {
     e.preventDefault();
     setPokeNumber((prevNumber) => prevNumber - 1);
