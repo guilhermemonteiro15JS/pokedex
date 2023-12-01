@@ -53,7 +53,7 @@ width: 80px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  background-color: #6c757d;
+  background: #495057;
   color: #fff; 
   border: 2px solid #000; 
   box-shadow: 0 ;

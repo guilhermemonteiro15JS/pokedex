@@ -160,7 +160,7 @@ const Main = () => {
 
           />
         )}
-        {!loading && pokemon && showDetails &&<Border />}
+        {!loading && pokemon && showDetails && <Border />}
         {!loading && pokemon && showDetails && (
           <Right
             pokemon={pokemon}
