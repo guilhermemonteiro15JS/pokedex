@@ -89,11 +89,12 @@ export const Title = styled.h1`
   font-weight: bold;
 `;
 export const SubTitle = styled.h2`
-  margin: 5px;
+  margin: 3px;
   color: #ffffff;
   font-weight: bold;
   font-family: "Playfair Display", serif;
   text-align: center;
+  font-size: 18px;
 `;
 export const CapaContainer = styled.div`
   display: flex;
@@ -136,3 +137,11 @@ export const ImagePoke1 = styled.image`
   display: flex;
   align-items: center;
 `;
+
+export const Div = styled.div`
+height:3px;`; 
+
+export const H3 = styled.h3`
+margin: 10px;
+
+`; 
