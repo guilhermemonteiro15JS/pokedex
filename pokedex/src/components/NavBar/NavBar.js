@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import {Link } from "react-router-dom"
 import {
   NavBarStyle,
-  Button,
   ImagemPoke,
   DivButton,
   MenuButton,
@@ -79,7 +79,9 @@ const NavBar = ({ handleRegion, showButtons }) => {
 
   return (
     <NavBarStyle>
-      <ImagemPoke src="/PokémonLogo.png" alt="Pokémon" />
+      <Link to="/"> 
+      <ImagemPoke src="/PokémonLogo.png" alt="Pokémon"/>
+      </Link>
       <MenuButton
         onClick={toggleMenu}
         isOpen={menuOpen}

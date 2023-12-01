@@ -22,7 +22,7 @@ border-top-width: 0px;
 border-bottom-width: 0px;
 border-left-width: 0px;
 border-right-width: 0px;
-left: 50px;
+left: 45px;
 overflow: hidden;
 border: 6px solid #522438;
 box-shadow: inset 6px 6px rgba(0,0,0,0.2);

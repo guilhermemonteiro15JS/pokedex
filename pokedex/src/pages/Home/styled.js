@@ -25,7 +25,7 @@ export const PokedexFechada = styled.div`
 width: 400px;
 height: 650px;
 border-radius: 15px;
-background: #D2162E;
+background: #ee0007;
 box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.5);
 `;
 
@@ -72,7 +72,7 @@ height: 588px;
 flex-shrink: 0;
 border-radius: 15px;
 border: 1px solid #EB0909;
-background: #D2162E;
+background: #ee0007;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 display: flex;
 align-items: center;
@@ -89,11 +89,13 @@ flex-direction: column;
 
 export const Title= styled.h1`
 margin: 5px;
-color:white;
+color:#ffffff;
+font-weight:bold;
 `;
 export const SubTitle= styled.h2`
 margin: 5px;
-color:white;
+color:#ffffff;
+font-weight:bold;
 `;
 export const CapaContainer = styled.div`
 display: flex;
@@ -105,12 +107,13 @@ export const Button = styled.button`
  position: absolute;
   width: 60px;
   height: 60px;
-  background: #EB0909;
+  background: #ee0007;
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -83%);
   transition: filter 0.3s ease-in-out;
+  cursor: pointer;
 
 &:hover {
     filter: blur(5px); 
@@ -126,6 +129,7 @@ export const Image = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  cursor:default;
 `;
 
 export const ImagePoke1 = styled.image`
