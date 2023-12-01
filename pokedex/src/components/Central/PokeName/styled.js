@@ -18,7 +18,7 @@ box-shadow: inset 6px 6px rgba(0,0,0,0.2);
 overflow: hidden;
 color: black;
 font-size: 25px;
-margin-bottom:60px;
+/* margin-bottom:60px; */
 text-transform:uppercase;
 
 @media (max-width: 1175px) {

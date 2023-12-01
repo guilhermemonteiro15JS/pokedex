@@ -19,6 +19,8 @@ const Main = () => {
   const [bkImage, setBkImage] = useState("/Gen1_Map.png");
   const [pokeID, setPokeID] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [showDetails, setShowDetails] = useState(false);
+  const [showFilter, setShowFilter] = useState(false);
   const regionLenght = pokedex.length;
 
   const showButtons= true;
@@ -140,10 +142,10 @@ const Main = () => {
       <NavBar handleRegion={handleRegion} showButtons={showButtons}/>
       <PokedexMini>
       {loading && <LoadingImg src="Loading.gif" alt="Loading" />}
-        {!loading && pokemon && (
+        {!loading && pokemon && showFilter && (
           <Left handleSearch={handleSearch} handleRegion={handleRegion} />
         )}
-        {!loading && pokemon && <BorderTwo />}
+        {!loading && pokemon && showFilter && <BorderTwo />}
         {!loading && pokemon && (
           <Central
             pokemon={pokemon}
@@ -151,10 +153,15 @@ const Main = () => {
             onNext={handleNext}
             regionLenght={regionLenght}
             pokeNumber={pokeNumber}
+            showDetails={showDetails}
+            setShowDetails={setShowDetails}
+            showFilter={showFilter}
+            setShowFilter={setShowFilter}
+
           />
         )}
-        {!loading && pokemon && <Border />}
-        {!loading && pokemon && (
+        {!loading && pokemon && showDetails &&<Border />}
+        {!loading && pokemon && showDetails && (
           <Right
             pokemon={pokemon}
             pokeSpecie={pokeSpecie}

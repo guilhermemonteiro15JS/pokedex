@@ -7,7 +7,7 @@ export const CentralStyle = styled.div`
   border-radius: 15px;
   background: #ee0007;
   box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.5);
-
+margin-bottom:10px;
 
   @media (max-width: 1175px) {
     width: 380px;
@@ -16,6 +16,7 @@ export const CentralStyle = styled.div`
   @media (max-width: 875px) {
     width: 380px;
     height: 350px;
+    margin-bottom:0px;
   }
 
 
@@ -84,7 +85,7 @@ export const NavigationButtonsContainer = styled.div`
 export const BtnOnNext = styled.button`
   width: 110px;
   height: 40px;
-  background: #8b8b8b;
+  background: #495057;
   border: 2px solid #000;
   border-radius: 20px;
   cursor: pointer;
@@ -105,7 +106,7 @@ export const BtnOnNext = styled.button`
 export const BtnOnPrev = styled.button`
  width: 110px;
   height: 40px;
-  background: #8b8b8b;
+  background: #495057;
   border: 2px solid #000;
   border-radius: 20px; 
   cursor: pointer;
@@ -130,4 +131,31 @@ export const ArrowLeftIcon = styled(BsArrowLeft)`
   color: #fff; 
   font-size: 30px; 
   font-weight:bold;
+`;
+
+export const DetailsAndFilterContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+`;
+
+
+export const BtnDetails = styled.button`
+ width: 110px;
+  height: 20px;
+  background: #495057;
+  border: 2px solid #000;
+  border-radius: 20px; 
+  cursor: pointer;
+  padding: 0 10px; 
+  margin-bottom:10px;
+  color: #fff;
+
+  &:hover {
+    background: #a0a0a0;
+  }
+
+  &:active {
+    filter: brightness(0.8);
+  }
 `;
