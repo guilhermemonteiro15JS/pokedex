@@ -1,30 +1,31 @@
 import React from "react";
-import NavBar from "../../components/NavBar/NavBar";
-import {Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import {
   PokedexFechada,
   Pokedex,
   BrowserButtonsContainer,
   BrowserButton,
   Capa,
-  CapaContainer, 
-  Image, 
-  Button, 
-  TextCountainer, 
+  CapaContainer,
+  Image,
+  Button,
+  TextCountainer,
   Title,
   SubTitle,
-  HomeD
+  HomeD,
 } from "./styled";
 
-const Home = () => {
-  const showButtons = false;
 
+const Home = () => {
   return (
     <HomeD>
-      {/* <NavBar showButtons={showButtons} /> */}
       <TextCountainer>
-      <Title> Aqui poderás ver todos os Pokemons das várias gerações. </Title>
-      <SubTitle> Clica no centro da Pokebola e revive memórias de infância.</SubTitle>
+        <SubTitle>
+Welcome to the fascinating world of Pokémon! <p/>Embark on a unique journey through the diverse generations of these lovable creatures, exploring their abilities, evolutions, and intriguing facts.
+ Our website offers a comprehensive experience with the Pokédex, allowing you to delve deep into all generations of Pokémon, 
+ from the classics of the Kanto region to the latest discoveries in Paldea. Be a virtual trainer, discover detailed information about each Pokémon.<p/>
+ Click on the Pokeball to find your ultimate guide to becoming a Pokémon master!
+        </SubTitle>
       </TextCountainer>
       <Pokedex>
         <PokedexFechada>
@@ -35,11 +36,11 @@ const Home = () => {
           </BrowserButtonsContainer>
           <CapaContainer>
             <Link to="/main">
-            <Capa>
-              <Image >
-                <Button/>
-              </Image>
-            </Capa>
+              <Capa>
+                <Image>
+                  <Button />
+                </Image>
+              </Capa>
             </Link>
           </CapaContainer>
         </PokedexFechada>

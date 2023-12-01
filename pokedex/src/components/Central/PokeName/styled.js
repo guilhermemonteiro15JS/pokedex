@@ -2,7 +2,7 @@ import styled  from "styled-components";
 
 export const PokeNameH2= styled.h2`
 display: flex;
-width: 366px;
+width: 350px;
 height: 50px;
 padding: 10px;
  /* justify-content:center;  */
@@ -18,7 +18,7 @@ box-shadow: inset 6px 6px rgba(0,0,0,0.2);
 overflow: hidden;
 color: black;
 font-size: 25px;
-margin-bottom:60px;
+/* margin-bottom:60px; */
 text-transform:uppercase;
 
 @media (max-width: 1175px) {
@@ -50,14 +50,19 @@ export const Glass = styled.div`
 export const PokeID = styled.h3 `
 font-size:15px;
 width:80px;
-margin-right: 60px;
+margin-right: 35px;
 display:flex;
 justify-content:flex-start;
 
 
+@media (max-width: 1175px) {
+  font-size:15px;
+  margin-right: 10px;
+}
+
 
 @media (max-width: 875px) {
-    font-size:10px;
+    font-size:12px;
 margin-right: 0px;
 width:70px;
 }

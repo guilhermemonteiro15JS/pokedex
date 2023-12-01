@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const NavBarStyle = styled.div`
   display: flex;
-   background-color: rgba(135, 206, 250, 0.7);
+  
   width: 100%;
   max-width:100%;
   justify-content: space-between;
@@ -16,6 +16,7 @@ export const NavBarStyle = styled.div`
     padding: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    background-color: rgba(135, 206, 250, 0.7);
   }
 `;
 
@@ -58,31 +59,6 @@ export const MenuButton = styled.div`
   }
 `;
 
-export const Button = styled.button`
-  background: ${({ isSelected }) =>
-    isSelected
-      ? "linear-gradient(90deg, #305e8c 6%, #4d9de0 25%, #6f42c1 45%, #007bff 55%, #0012cc 94%)"
-      : "linear-gradient(90deg, #00bfff 6%, #87ceeb 25%, #1e90ff 45%, #4682b4 55%, #4169e1 94%)"};
-  color: white;
-  border: 1px;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s, box-shadow 0.3s;
-  box-shadow: ${({ isSelected }) =>
-    isSelected ? "0 0 10px rgba(0, 0, 0, 0.5)" : "none"};
-
-  &:active {
-    background-color: #305e8c;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-`;
 
 export const ImagemPoke = styled.img`
   border: none;
@@ -95,7 +71,8 @@ export const ImagemPoke = styled.img`
 export const DivButton = styled.div`
   display: flex;
   gap: 10px;
- /*  margin-right: 180px; */
+
+ margin-right: 60px;
 
  @media (max-width: 920px) {
    gap:1px;

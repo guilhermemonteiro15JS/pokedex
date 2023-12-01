@@ -48,7 +48,7 @@ export const CommonBtnStyle = styled.div`
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  background-color: #8b8b8b;
+background: #495057;;
   color: #fff;
   border: 2px solid #000;
   box-shadow: 0;

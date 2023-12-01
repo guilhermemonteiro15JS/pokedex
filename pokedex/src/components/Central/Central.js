@@ -10,13 +10,17 @@ import {
   BtnOnPrev,
   ImgAndName,
   ArrowLeftIcon,
-  ArrowRightIcon
+  ArrowRightIcon,
+  BtnDetails,
+  DetailsAndFilterContainer
 } from "./styled";
 
-const Central = ({ pokemon, onPrev, onNext, regionLenght, pokeNumber }) => {
+const Central = ({ pokemon, onPrev, onNext, regionLenght, pokeNumber ,showDetails ,setShowDetails,showFilter,setShowFilter}) => {
   const prevPokemon = pokeNumber > 0;
 
   const nextPokemon = pokeNumber < regionLenght - 1;
+
+
 
   return (
     <CentralStyle>
@@ -29,6 +33,11 @@ const Central = ({ pokemon, onPrev, onNext, regionLenght, pokeNumber }) => {
       <PokeImage pokemon={pokemon} />
       <PokeName pokemon={pokemon} />
       </ImgAndName>
+      <DetailsAndFilterContainer>
+      <BtnDetails onClick={() =>setShowFilter(!showFilter)} >Filter</BtnDetails>
+      <BtnDetails onClick={() =>setShowDetails(!showDetails)} >Details</BtnDetails>
+      
+      </DetailsAndFilterContainer>
       <NavigationButtonsContainer>
         <BtnOnPrev onClick={onPrev} disabled={!prevPokemon}><ArrowLeftIcon></ArrowLeftIcon></BtnOnPrev>
         <BtnOnNext onClick={onNext} disabled={!nextPokemon}><ArrowRightIcon></ArrowRightIcon></BtnOnNext>
